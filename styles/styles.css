@@ -626,6 +626,7 @@
   }
 
   .doctor-video__video-container {
+    max-width: 375px;
     width: 100%;
     height: auto;
     top: 260px;
@@ -775,7 +776,6 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 139%;
-  max-width: 160px
 }
 
 .prize__text .normal-span {
