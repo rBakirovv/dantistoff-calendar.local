@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Календарь</title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <div class="container header__wrap">
+      <a class="phone" href="tel:+74953244447">
+        <img class="" data-src="./img/phone.svg" alt="" src="./img/phone.svg"></a>
+      <a class="logo" href="./"><img src="./images/logo.svg" alt=""></a>
+      <div class="burger">
+        <img class="" data-src="./img/burger.svg" alt="" src="./img/burger.svg">
+      </div>
+      <div class="prize link-inherit">
+        <div class="prize__pic">
+          <img class="" alt="" src="./img/prize.webp">
+        </div>
+        <p class="prize__text">Клиника года в номинации <span class="normal-span">«Народный выбор»</span></p>
+      </div>
+      <div class="socials">
+        <a class="socials__link --vk" target="_blank" rel="nofollow" href="https://vk.com/dantistofficial">
+          <img class="" alt="" src="./img/vk.svg"></a>
+        <a class="socials__link --tm" target="_blank" rel="nofollow" href="https://t.me/dantistoff">
+          <img class="" alt="" src="./img/tm.svg"></a>
+        <a class="socials__link --yt" target="_blank" rel="nofollow"
+          href="https://www.youtube.com/channel/UCMOMRKoCbnvBVrAkdCsMICg">
+          <img class="" alt="" src="./img/yt.svg"></a>
+      </div>
+      <div class="header__contact">
+        <div class="header__contact-name">6 клиник в Москве</div>
+        <a class="header__contact-link link-inherit" href="#map">Схема
+          проезда и контакты</a>
+      </div>
+      <div class="header__contact">
+        <a href="tel:+74953244447" class="header__contact-name link-inherit">+7 (495) 324-44-47</a>
+        <a class="header__contact-link link-inherit" href="javascript: ComagicWidget.openSitePhonePanel();">Заказать
+          обратный звонок</a>
+      </div>
+      <div class="header__btn">
+        <a href="/" class="link-inherit transparent-button header__transparent-button">Записаться на приём</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <section class="stb stb-moon-calendar">
+      <div class="stb__container">
+        <a class="main__scroll" href="#doctor-video">
+          <img class="" data-src="./img/scroll.svg" alt="" src="./img/scroll.svg">
+        </a>
+        <div class="stb__content-container">
+          <h1 class="stb__title">Лечение зубов</h1>
+          <p class="stb__subtitle">по лунному календарю</p>
+          <p class="stb__text">Планируете визит к стоматологу в соответствии с лунным календарем — полезная информация о
+            благоприятных лунных днях для лечения зубов индивидуально!</p>
+          <ul class="stb__list">
+            <li class="stb__list-item">
+              <div class="stb__list-item-dot"></div> Проведем лечение в самые благоприятные дни
+            </li>
+            <li class="stb__list-item">
+              <div class="stb__list-item-dot"></div> Индивидуальномый план
+            </li>
+            <li class="stb__list-item">
+              <div class="stb__list-item-dot"></div> Индивидуальномый план
+            </li>
+          </ul>
+          <div class="stb__buttons-container">
+            <a href="/" class="link-inherit orange-button stb__orange-button">Записаться на прием</a>
+            <a href="/" class="link-inherit transparent-button stb__transparent-button">Задать вопрос</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="doctor-video" class="doctor-video">
+      <div class="doctor-video__container">
+        <div class="doctor-video__content-container">
+          <div class="doctor-video__text-container">
+            <div class="doctor-video__quote-img"></div>
+            <p class="doctor-video__quote">
+              Цитата врача
+            </p>
+            <h2 class="doctor-video__title">Фазы луны имеют большое
+              значение для биологических
+              процессов всего живого
+            </h2>
+            <p class="doctor-video__subtitle">Я верю, что за ними будущее. Все мои пациенты
+              возвращаются к качественной жизни сразу
+              и больше не скрывают улыбку
+            </p>
+            <div class="doctor-video__doctor-container">
+              <img src="./images/doctor-video-doc-img.png" alt="Харламов Артём Андреевич">
+              <div>
+                <p class="doctor-video__doctor-name">Харламов Артём Андреевич</p>
+                <p class="doctor-video__doctor-position">Хирург-имплантолог</p>
+              </div>
+            </div>
+          </div>
+          <a class="youtube-compact doctor-video__video-container tube"
+            href="https://www.youtube.com/watch?v=96U8uYldUuw" rel="nofollow">
+            <div class="doctor-button-tool_top"></div>
+            <div class="doctor-button-tool_bottom"></div>
+            <video class="doctor-video__video" autoplay="" muted="" playsinline="" loop="">
+              <source src="https://dantistoff.ru/all-on-4//video/shatilova.mp4" type="video/mp4">
+            </video>
+            <div class="video-play doctor-video__video-play">
+              <img src="./images/video-play-button.svg" alt="play">
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="footer">
+    <div class="footer__wrap">
+      <div class="footer-top">
+        <div class="container"><a class="logo" href="./"><img class="" data-src="./img/logo.svg" alt=""
+              src="./images/logo.svg"></a>
+          <div class="socials">
+            <a class="socials__link --vk" target="_blank" rel="nofollow" href="https://vk.com/dantistofficial">
+              <img class="" data-src="./img/vk.svg" src="./img/vk.svg" alt=""></a>
+            <a class="socials__link --tm" target="_blank" rel="nofollow" href="https://t.me/dantistoff">
+              <img class="" data-src="./img/tm.svg" src="./img/tm.svg" alt="">
+            </a>
+            <a class="socials__link --yt" target="_blank" rel="nofollow"
+              href="https://www.youtube.com/channel/UCMOMRKoCbnvBVrAkdCsMICg">
+              <img class="" data-src="./img/yt.svg" src="./img/yt.svg" alt="">
+            </a>
+          </div>
+          <div class="header__contact">
+            <div class="header__contact-name">6 клиник в Москве</div>
+            <a class="header__contact-link link-inherit" href="#map">Схема
+              проезда и контакты</a>
+          </div>
+          <div class="header__contact">
+            <a href="tel:+74953244447" class="header__contact-name link-inherit">+7 (495) 324-44-47</a>
+            <a class="header__contact-link link-inherit" href="javascript: ComagicWidget.openSitePhonePanel();">Заказать
+              обратный
+              звонок</a>
+          </div>
+          <a href="/" class="link-inherit transparent-button footer__transparent-button">Перезвоните мне</a>
+          <a href="/" class="link-inherit orange-button footer__orange-button">Записаться на прием</a>
+        </div>
+      </div>
+      <div class="footer-center">
+        <div class="underground">
+          <div class="container">
+            <div class="underground__list">
+              <div class="underground__item --purple">
+                <div class="underground__ico"><svg width="21" height="15" viewBox="0 0 21 15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.5204 0.0644069L14.3438 0.0641013L10.5898 7.68494L6.70076 -0.000976562L1.37607 13.8838H0V14.999H7.53861V13.8838H6.0428L7.53861 9.5444L10.5898 14.999L13.5215 9.5444L15.0171 13.8838H13.5215V14.999H21V13.8838H19.7044L14.5204 0.0644069Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="underground__info">
+                  <div class="underground__name">Беговая</div>
+                  <div class="underground__address">Хорошёвское шоссе, 48</div>
+                </div>
+              </div>
+
+              <div class="underground__item --purple">
+                <div class="underground__ico"><svg width="21" height="15" viewBox="0 0 21 15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.5204 0.0644069L14.3438 0.0641013L10.5898 7.68494L6.70076 -0.000976562L1.37607 13.8838H0V14.999H7.53861V13.8838H6.0428L7.53861 9.5444L10.5898 14.999L13.5215 9.5444L15.0171 13.8838H13.5215V14.999H21V13.8838H19.7044L14.5204 0.0644069Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="underground__info">
+                  <div class="underground__name">Полежаевская</div>
+                  <div class="underground__address">Хорошевское шоссе, 17</div>
+                </div>
+              </div>
+
+              <div class="underground__item --orange">
+                <div class="underground__ico"><svg width="21" height="15" viewBox="0 0 21 15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.5204 0.0644069L14.3438 0.0641013L10.5898 7.68494L6.70076 -0.000976562L1.37607 13.8838H0V14.999H7.53861V13.8838H6.0428L7.53861 9.5444L10.5898 14.999L13.5215 9.5444L15.0171 13.8838H13.5215V14.999H21V13.8838H19.7044L14.5204 0.0644069Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="underground__info">
+                  <div class="underground__name">Проспект Мира</div>
+                  <div class="underground__address">проспект Мира, 53</div>
+                </div>
+              </div>
+              <div class="underground__item --yellow">
+                <div class="underground__ico"><svg width="21" height="15" viewBox="0 0 21 15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.5204 0.0644069L14.3438 0.0641013L10.5898 7.68494L6.70076 -0.000976562L1.37607 13.8838H0V14.999H7.53861V13.8838H6.0428L7.53861 9.5444L10.5898 14.999L13.5215 9.5444L15.0171 13.8838H13.5215V14.999H21V13.8838H19.7044L14.5204 0.0644069Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="underground__info">
+                  <div class="underground__name">Раменки</div>
+                  <div class="underground__address">Столетова, 11</div>
+                </div>
+              </div>
+              <div class="underground__item --orange">
+                <div class="underground__ico"><svg width="21" height="15" viewBox="0 0 21 15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.5204 0.0644069L14.3438 0.0641013L10.5898 7.68494L6.70076 -0.000976562L1.37607 13.8838H0V14.999H7.53861V13.8838H6.0428L7.53861 9.5444L10.5898 14.999L13.5215 9.5444L15.0171 13.8838H13.5215V14.999H21V13.8838H19.7044L14.5204 0.0644069Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="underground__info">
+                  <div class="underground__name">Академическая</div>
+                  <div class="underground__address">Винокурова, 2</div>
+                </div>
+              </div>
+              <div class="underground__item --grey">
+                <div class="underground__ico"><svg width="21" height="15" viewBox="0 0 21 15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.5204 0.0644069L14.3438 0.0641013L10.5898 7.68494L6.70076 -0.000976562L1.37607 13.8838H0V14.999H7.53861V13.8838H6.0428L7.53861 9.5444L10.5898 14.999L13.5215 9.5444L15.0171 13.8838H13.5215V14.999H21V13.8838H19.7044L14.5204 0.0644069Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="underground__info">
+                  <div class="underground__name">Савёловская</div>
+                  <div class="underground__address">Складочная, 1 стр 18</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="fotter-bottom-wrap">
+            <p>ООО&nbsp;«Дантистофф» 2012&nbsp;— 2023</p><img class="" data-src="./img/pay.svg" alt=""
+              src="./img/pay.svg">
+            <p>Лицензия ЛО-77-01-008741</p>
+          </div>
+          <div class="copyright">ООО&nbsp;«Дантистофф» 2012&nbsp;— 2022 Лицензия ЛО-77-01-004442; ИНН: 1117746533145;
+            ОГРН: 7704785911 Все права защищены. Без согласования с автором перепечатка и использование для контента
+            веб-сайтов запрещены. 4 часть ГК РФ. Статья 1274. Цитирование в разумных пределах допускается с обязательным
+            указанием имени автора и источника заимствования с обязательной Активной ссылкой.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/header.js"></script>
+  <script src="./js/videotube.min.js"></script>
+</body>
+
+</html>
