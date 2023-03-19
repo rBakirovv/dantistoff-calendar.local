@@ -1312,11 +1312,6 @@
   color: #666
 }
 
-.burger,
-.phone {
-  display: none
-}
-
 .footer-top-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
