@@ -123,8 +123,594 @@
         </div>
       </div>
     </section>
+    <section class="calendar">
+      <div class="calendar-blur-bg"></div>
+      <img src="./images/moon-bg-mob.png" class="calendar-moon-bg"/>
+      <div class="calendar__container">
+        <h2 class="calendar__title">Лунный календарь <span class="calendar__title-span">2023</span></h2>
+        <ul class="accordions-list calendar-accordions-list">
+          <li class="accordion-item">
+            <div class="accordion-head">
+              Январь
+              <svg class="accordion-arrow-svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="accordion-arrow-path" d="M10 1L20 11L10 21" stroke="black" stroke-width="2"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="accordion-body">
+              <div class="calendar-accordion-container">
+                <div class="calendar__calendar-info-container">
+                  <img class="calendar__img" src="./images/calendar-item.png" alt="">
+                  <div>
+                    <div>
+                      <p class="calendar__category-title">Категория дней</p>
+                      <div class="calendar__category-container">
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_green"></div>
+                          Очень благоприятные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_salat"></div>
+                          Благоприятные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_yellow"></div>
+                          Нейтральные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_orange"></div>
+                          Неблагоприятные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_red"></div>
+                          Категорически нельзя
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calendar__categories-main-container">
+                      <p class="calendar__category-title">Категория дней</p>
+                      <div class="calendar__category-gird-container">
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32461" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32461)">
+                              <path
+                                d="M3.72 9.904L1.32 6H3.8L4.84 7.712L5.288 8.832L5.768 7.712L6.856 6H9.112L6.696 9.84L9.272 14H6.856L5.624 12.08L5.144 10.896L4.632 12.08L3.4 14H1.128L3.72 9.904ZM9.90225 12.24H12.1263V5.92L12.3663 4.832L11.5983 5.776L10.1743 6.752L9.29425 5.552L12.9423 2.608H14.1103V12.24H16.2863V14H9.90225V12.24Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Первичные операции
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32465" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32465)">
+                              <path
+                                d="M3.72 9.904L1.32 6H3.8L4.84 7.712L5.288 8.832L5.768 7.712L6.856 6H9.112L6.696 9.84L9.272 14H6.856L5.624 12.08L5.144 10.896L4.632 12.08L3.4 14H1.128L3.72 9.904ZM15.8863 5.536C15.8863 6.08 15.7849 6.62933 15.5823 7.184C15.3903 7.73867 15.1396 8.28267 14.8303 8.816C14.5316 9.34933 14.1956 9.86667 13.8223 10.368C13.4596 10.8587 13.1023 11.312 12.7503 11.728L11.9023 12.384V12.464L13.0543 12.24H16.1263V14H9.39025V12.928C9.64625 12.6613 9.93425 12.352 10.2543 12C10.5743 11.6373 10.8943 11.2587 11.2143 10.864C11.5449 10.4587 11.8649 10.0427 12.1743 9.616C12.4836 9.18933 12.7609 8.76267 13.0063 8.336C13.2516 7.89867 13.4436 7.47733 13.5823 7.072C13.7316 6.66667 13.8063 6.28267 13.8063 5.92C13.8063 5.48267 13.6783 5.12533 13.4223 4.848C13.1769 4.56 12.7823 4.416 12.2383 4.416C11.8969 4.416 11.5449 4.49067 11.1823 4.64C10.8303 4.77867 10.5316 4.96 10.2863 5.184L9.45425 3.712C9.87025 3.37067 10.3396 3.09867 10.8623 2.896C11.3956 2.68267 12.0196 2.576 12.7343 2.576C13.1929 2.576 13.6143 2.64 13.9983 2.768C14.3823 2.896 14.7129 3.08267 14.9903 3.328C15.2676 3.57333 15.4863 3.88267 15.6463 4.256C15.8063 4.61867 15.8863 5.04533 15.8863 5.536Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Повторные операции
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32477" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32477)">
+                              <path
+                                d="M7.96092 9.96186C9.19789 9.99246 9.40929 15 10.887 15C11.8225 15 12.4253 13.741 12.5446 10.4974C12.666 7.25374 14.6858 6.52807 14.0223 2.75112C13.3588 -1.02802 9.0765 1.19486 7.96092 1.19486C6.84535 1.19486 2.56306 -1.02802 1.89958 2.75112C1.23609 6.53026 3.25583 7.25374 3.37723 10.4974C3.49862 13.741 4.10141 15 5.03489 15C6.51255 15.0022 6.72395 9.99464 7.96092 9.96186Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Лечение
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32527" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32527)">
+                              <path
+                                d="M11.7434 4.25196C12.2713 4.77995 13.0734 4.87 13.6954 4.52304L14.3699 5.19758L14.9998 4.56771L14.3251 3.89316C14.6722 3.27118 14.5822 2.4691 14.0543 1.94123L12.0584 -0.0546875L9.74707 2.25663L11.7434 4.25196Z"
+                                fill="#4D2483"></path>
+                              <path
+                                d="M5.0416 13.2648L9.6842 8.62219L9.63708 6.14795L11.0076 4.77727L9.1171 2.88672L1.89038 10.1134L5.0416 13.2648Z"
+                                fill="#4D2483"></path>
+                              <path
+                                d="M-0.000244141 12.004L1.26043 10.7432L4.41177 13.8945L3.15098 15.1552L-0.000244141 12.004Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Новейшее оборудование
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32487)">
+                              <rect x="3.35474" y="2.83887" width="9.29026" height="10.3225" rx="2" fill="#4D2483">
+                              </rect>
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.176717 5.87436C0.495622 5.4018 1.13723 5.27724 1.60978 5.59615C2.05651 5.89762 2.89251 6.22115 4.03446 6.48009C5.15019 6.73309 6.46821 6.90459 7.81046 6.95356C9.15458 7.00259 10.4936 6.92766 11.6576 6.70321C12.8393 6.47535 13.7484 6.1109 14.3181 5.6496C14.7611 5.29081 15.4111 5.35911 15.7699 5.80215C16.1287 6.24519 16.0604 6.8952 15.6173 7.25398C14.6723 8.01934 13.385 8.47267 12.0485 8.73037C10.6943 8.99148 9.19328 9.06988 7.7352 9.01669C6.27524 8.96343 4.82891 8.77715 3.57791 8.49348C2.35313 8.21576 1.21999 7.82374 0.454926 7.30743C-0.0176299 6.98852 -0.142189 6.34692 0.176717 5.87436Z"
+                                fill="#4D2483"></path>
+                              <rect x="5.41919" y="5.93555" width="5.16126" height="4.12901" rx="1" fill="white"></rect>
+                            </g>
+                          </svg>
+                          Брекеты и эстетика
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32492" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32492)">
+                              <path
+                                d="M13.9564 6.91051C14.5219 5.62973 15.1212 4.46011 14.7039 2.18853C14.016 -1.56199 9.57759 0.645137 8.42247 0.645137C7.26574 0.645137 2.8273 -1.56199 2.13939 2.18853C1.72213 4.46011 2.32144 5.62973 2.88691 6.91051H13.9564Z"
+                                fill="#4D2483"></path>
+                              <path d="M9.99799 6.59131H8.43527H8.4095H5.47095V8.60994L9.99799 6.59131Z" fill="#4D2483">
+                              </path>
+                              <path d="M11.3738 7.79004L5.47095 10.4225V12.2462L11.3738 9.6154V7.79004Z" fill="#4D2483">
+                              </path>
+                              <path
+                                d="M6.32178 13.6799L8.40969 15.0977V15.117L8.42258 15.1074L8.43547 15.117V15.0977L11.374 13.1032V11.4277L6.32178 13.6799Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Пломбы, импланты
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32497" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32497)">
+                              <path
+                                d="M5.11137 13.0199C5.11137 13.0196 5.11156 13.0193 5.11186 13.0191C6.15398 12.4886 7.12043 11.8222 7.98937 11.0375C8.0591 10.9695 8.01948 10.8555 7.92599 10.8281C7.50897 10.706 7.12795 10.4811 6.81895 10.1709L5.99537 9.33932C5.60511 8.94528 4.96872 8.94409 4.57699 9.33667L1.22164 12.6993C0.926121 12.996 0.926121 13.4783 1.22164 13.7764C1.29393 13.849 1.37899 13.9049 1.47205 13.9429C1.48336 13.9475 1.49094 13.9584 1.49094 13.9706C1.49094 13.9868 1.5041 14 1.52033 14H12.5104C12.7808 14 13 13.7808 13 13.5104C13 13.24 12.7808 13.0208 12.5104 13.0208H5.11228C5.11177 13.0208 5.11137 13.0204 5.11137 13.0199ZM8.65609 9.94583C9.08407 9.94583 9.4946 9.77629 9.79885 9.47229L12.4567 6.80395C12.6434 6.61653 12.7482 6.36277 12.7482 6.09824V3.4576C12.7482 2.56065 11.6585 2.11727 11.0323 2.7594L6.67311 7.22907C6.29196 7.61987 6.29466 8.24413 6.67916 8.63163L7.51479 9.47377C7.81758 9.7763 8.2281 9.94583 8.65609 9.94583ZM9.80839 5.64382C9.99987 5.45158 10.3111 5.45158 10.5026 5.64382L11.28 6.42425C11.4704 6.61542 11.4704 6.92456 11.28 7.11573C11.0885 7.30796 10.7772 7.30796 10.5857 7.11572L9.80839 6.33528C9.61799 6.14412 9.61799 5.83499 9.80839 5.64382Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Операция
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32502" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32502)">
+                              <path
+                                d="M1.00002 7.32704V3.47723V3.47722C0.996833 3.01997 1.33923 2.63658 1.78752 2.59544L1.78752 2.59544C3.87453 2.42943 5.85527 1.59254 7.44263 0.206088C7.76499 -0.0686962 8.23502 -0.0686961 8.55737 0.206088V0.206088C10.1445 1.59291 12.1254 2.42985 14.2125 2.59544C14.6609 2.63702 15.0032 3.02068 15 3.47812V7.32793V7.32794C14.9026 11.3405 12.2542 14.825 8.45761 15.936C8.15861 16.0213 7.84225 16.0213 7.54324 15.936C3.74599 14.8253 1.09713 11.3401 1.00003 7.32704L1.00002 7.32704Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Укрепление
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32507" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32507)">
+                              <path
+                                d="M13.4617 3.20395L11.0161 4.57774C10.5846 4.21719 10.0848 3.93245 9.53802 3.74479V1H6.46177V3.74479C5.91492 3.93245 5.41513 4.21728 4.98364 4.57774L2.53812 3.20395L1 5.7959L3.44326 7.16839C3.39137 7.43816 3.36297 7.71581 3.36297 8.00005C3.36297 8.28419 3.39137 8.56194 3.44326 8.83161L1 10.2041L2.53812 12.796L4.98364 11.4223C5.41513 11.7828 5.91492 12.0675 6.46177 12.2552V15H9.53802V12.2552C10.0849 12.0675 10.5847 11.7828 11.0162 11.4223L13.4618 12.796L14.9999 10.2041L12.5566 8.83161C12.6085 8.56194 12.6369 8.28419 12.6369 8.00005C12.6369 7.71591 12.6085 7.43816 12.5566 7.16849L15 5.796L13.4617 3.20395ZM7.9999 9.5184C7.13927 9.5184 6.43921 8.83719 6.43921 7.99995C6.43921 7.16261 7.13937 6.4815 7.9999 6.4815C8.86043 6.4815 9.56058 7.16271 9.56058 7.99995C9.56058 8.83729 8.86043 9.5184 7.9999 9.5184Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Аллергики
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32512" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32512)">
+                              <path
+                                d="M8.57437 6.35996L8.57437 7.1644C8.57437 7.41989 8.62686 7.63425 8.73047 7.80124C8.87338 8.03171 9.10796 8.16379 9.37432 8.16379C9.63527 8.16379 9.8946 8.04025 10.145 7.79684L12.8784 5.13987C13.4785 4.5565 13.4785 3.60729 12.8784 3.02391L10.145 0.366942C9.8946 0.123413 9.63527 1.05525e-08 9.37432 1.02336e-08C8.9761 9.74698e-09 8.57437 0.309081 8.57437 0.999386L8.57437 1.72997C4.69368 1.95275 1.48107 4.84764 1.00361 8.63778C0.976866 8.84945 1.10069 9.05209 1.30476 9.13058C1.36252 9.1528 1.42268 9.16354 1.48208 9.16354C1.63252 9.16354 1.77845 9.09506 1.87138 8.97164C3.15205 7.27072 5.20831 6.25522 7.37181 6.25522C7.77266 6.25522 8.17578 6.29038 8.57437 6.35996Z"
+                                fill="#4D2483"></path>
+                              <path
+                                d="M15.0891 6.8694C14.885 6.79079 14.6522 6.85622 14.5224 7.02846C13.2419 8.72926 11.1856 9.74476 9.02214 9.74476C8.62129 9.74476 8.21818 9.7096 7.81958 9.64002L7.81958 8.83558C7.81958 8.14528 7.41773 7.8362 7.01963 7.8362C6.75868 7.8362 6.49935 7.95973 6.24882 8.20326L3.51543 10.8601C2.91541 11.4435 2.91541 12.3927 3.51556 12.9762L6.24882 15.633C6.49935 15.8766 6.75868 16 7.01963 16C7.41773 16 7.81958 15.6909 7.81958 15.0006L7.81958 14.27C11.7004 14.0472 14.9129 11.1523 15.3903 7.36232C15.4171 7.15053 15.2933 6.94789 15.0891 6.8694Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Менять специалиста
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32517" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32517)">
+                              <path
+                                d="M8 0L10.0365 5.96353L16 8L10.0365 10.0365L8 16L5.96353 10.0365L0 8L5.96353 5.96353L8 0Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Отбеливание
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4.77726 7.22572L7.00386e-05 12.0029L2.64163 14.6445L7.41882 9.86727L12.1997 14.6482L14.8413 12.0066L10.0604 7.22571L14.8413 2.44478L12.1997 -0.196777L7.41882 4.58416L2.64163 -0.193033L6.95026e-05 2.44853L4.77726 7.22572Z"
+                              fill="#4D2483"></path>
+                          </svg>
+                          Любое посещение нельзя
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calendar__category-table-container">
+                  <p class="calendar__category-title">Характеристика дней в феврале</p>
+                  <ul class="options__content-options-container">
+                    <li class="options__content-option">
+                      <p class="options__content-option-title"><mark class="mark-calendar"><span
+                            class="calendar__green-text">Идеальные
+                            дни</span> для чисток и отбеливания</mark></p>
+                      <p class="options__content-option-subtitle">10 (с 09:57), 11
+                      </p>
+                    </li>
+                    <li class="options__content-option">
+                      <div class="options__content-option-title-container">
+                        <p class="options__content-option-title"><mark class="mark-calendar"><span
+                              class="calendar__green-text">Идеальные
+                              дни</span> для лечения и обследования с
+                            использованием
+                            новейших методик и оборудования, посещения новых специалистов</mark></p>
+
+                      </div>
+                      <p class="options__content-option-subtitle">18,19</p>
+                    </li>
+                    <div class="calendar__table-section"></div>
+                    <li class="options__content-option">
+                      <div class="options__content-option-title-container">
+                        <p class="options__content-option-title"><mark class="mark-calendar"><span
+                              class="calendar__orange-text">Дни, не
+                              благоприятные</span> для проведения имплантации, протезирования,
+                            манипуляций у ортодонта</mark></p>
+                      </div>
+                      <p class="options__content-option-subtitle">3, 4, 5, 6, 7, 8, 9, 10 ( до 09:56),
+                        11 ( с 08:18), 14 ( с 18:28), 15, 16, 17,
+                        18 (до 10:29), 20, 21 ( до 13:02),
+                        22 (с 08:14), 23, 24, 25, 26(до 18:47),
+                        28 (до 11:26)</p>
+                    </li>
+                    <div class="calendar__table-section"></div>
+                    <li class="options__content-option">
+                      <div class="options__content-option-title-container">
+                        <p class="options__content-option-title"><mark class="mark-calendar"><span
+                              class="calendar__red-text">Категорически
+                              нельзя</span> для чисток и отбеливания</mark></p>
+                      </div>
+                      <p class="options__content-option-subtitle">10 (с 09:57), 11</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="accordion-item accordion-item_active">
+            <div class="accordion-head">
+              Февраль
+              <svg class="accordion-arrow-svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="accordion-arrow-path" d="M10 1L20 11L10 21" stroke="black" stroke-width="2"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="accordion-body">
+              <div class="calendar-accordion-container">
+                <div class="calendar__calendar-info-container">
+                  <img class="calendar__img" src="./images/calendar-item.png" alt="">
+                  <div class="calendar__calendar-categories-list">
+                    <div>
+                      <p class="calendar__category-title">Категория дней</p>
+                      <div class="calendar__category-container">
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_green"></div>
+                          Очень благоприятные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_salat"></div>
+                          Благоприятные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_yellow"></div>
+                          Нейтральные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_orange"></div>
+                          Неблагоприятные
+                        </div>
+                        <div class="calendar__category">
+                          <div class="calendar__category-color calendar__category-color_red"></div>
+                          Категорически нельзя
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calendar__categories-main-container">
+                      <p class="calendar__category-title">Категория дней</p>
+                      <div class="calendar__category-gird-container">
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32461" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32461)">
+                              <path
+                                d="M3.72 9.904L1.32 6H3.8L4.84 7.712L5.288 8.832L5.768 7.712L6.856 6H9.112L6.696 9.84L9.272 14H6.856L5.624 12.08L5.144 10.896L4.632 12.08L3.4 14H1.128L3.72 9.904ZM9.90225 12.24H12.1263V5.92L12.3663 4.832L11.5983 5.776L10.1743 6.752L9.29425 5.552L12.9423 2.608H14.1103V12.24H16.2863V14H9.90225V12.24Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Первичные операции
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32465" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32465)">
+                              <path
+                                d="M3.72 9.904L1.32 6H3.8L4.84 7.712L5.288 8.832L5.768 7.712L6.856 6H9.112L6.696 9.84L9.272 14H6.856L5.624 12.08L5.144 10.896L4.632 12.08L3.4 14H1.128L3.72 9.904ZM15.8863 5.536C15.8863 6.08 15.7849 6.62933 15.5823 7.184C15.3903 7.73867 15.1396 8.28267 14.8303 8.816C14.5316 9.34933 14.1956 9.86667 13.8223 10.368C13.4596 10.8587 13.1023 11.312 12.7503 11.728L11.9023 12.384V12.464L13.0543 12.24H16.1263V14H9.39025V12.928C9.64625 12.6613 9.93425 12.352 10.2543 12C10.5743 11.6373 10.8943 11.2587 11.2143 10.864C11.5449 10.4587 11.8649 10.0427 12.1743 9.616C12.4836 9.18933 12.7609 8.76267 13.0063 8.336C13.2516 7.89867 13.4436 7.47733 13.5823 7.072C13.7316 6.66667 13.8063 6.28267 13.8063 5.92C13.8063 5.48267 13.6783 5.12533 13.4223 4.848C13.1769 4.56 12.7823 4.416 12.2383 4.416C11.8969 4.416 11.5449 4.49067 11.1823 4.64C10.8303 4.77867 10.5316 4.96 10.2863 5.184L9.45425 3.712C9.87025 3.37067 10.3396 3.09867 10.8623 2.896C11.3956 2.68267 12.0196 2.576 12.7343 2.576C13.1929 2.576 13.6143 2.64 13.9983 2.768C14.3823 2.896 14.7129 3.08267 14.9903 3.328C15.2676 3.57333 15.4863 3.88267 15.6463 4.256C15.8063 4.61867 15.8863 5.04533 15.8863 5.536Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Повторные операции
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32477" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32477)">
+                              <path
+                                d="M7.96092 9.96186C9.19789 9.99246 9.40929 15 10.887 15C11.8225 15 12.4253 13.741 12.5446 10.4974C12.666 7.25374 14.6858 6.52807 14.0223 2.75112C13.3588 -1.02802 9.0765 1.19486 7.96092 1.19486C6.84535 1.19486 2.56306 -1.02802 1.89958 2.75112C1.23609 6.53026 3.25583 7.25374 3.37723 10.4974C3.49862 13.741 4.10141 15 5.03489 15C6.51255 15.0022 6.72395 9.99464 7.96092 9.96186Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Лечение
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32527" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32527)">
+                              <path
+                                d="M11.7434 4.25196C12.2713 4.77995 13.0734 4.87 13.6954 4.52304L14.3699 5.19758L14.9998 4.56771L14.3251 3.89316C14.6722 3.27118 14.5822 2.4691 14.0543 1.94123L12.0584 -0.0546875L9.74707 2.25663L11.7434 4.25196Z"
+                                fill="#4D2483"></path>
+                              <path
+                                d="M5.0416 13.2648L9.6842 8.62219L9.63708 6.14795L11.0076 4.77727L9.1171 2.88672L1.89038 10.1134L5.0416 13.2648Z"
+                                fill="#4D2483"></path>
+                              <path
+                                d="M-0.000244141 12.004L1.26043 10.7432L4.41177 13.8945L3.15098 15.1552L-0.000244141 12.004Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Новейшее оборудование
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32487)">
+                              <rect x="3.35474" y="2.83887" width="9.29026" height="10.3225" rx="2" fill="#4D2483">
+                              </rect>
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.176717 5.87436C0.495622 5.4018 1.13723 5.27724 1.60978 5.59615C2.05651 5.89762 2.89251 6.22115 4.03446 6.48009C5.15019 6.73309 6.46821 6.90459 7.81046 6.95356C9.15458 7.00259 10.4936 6.92766 11.6576 6.70321C12.8393 6.47535 13.7484 6.1109 14.3181 5.6496C14.7611 5.29081 15.4111 5.35911 15.7699 5.80215C16.1287 6.24519 16.0604 6.8952 15.6173 7.25398C14.6723 8.01934 13.385 8.47267 12.0485 8.73037C10.6943 8.99148 9.19328 9.06988 7.7352 9.01669C6.27524 8.96343 4.82891 8.77715 3.57791 8.49348C2.35313 8.21576 1.21999 7.82374 0.454926 7.30743C-0.0176299 6.98852 -0.142189 6.34692 0.176717 5.87436Z"
+                                fill="#4D2483"></path>
+                              <rect x="5.41919" y="5.93555" width="5.16126" height="4.12901" rx="1" fill="white"></rect>
+                            </g>
+                          </svg>
+                          Брекеты и эстетика
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32492" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32492)">
+                              <path
+                                d="M13.9564 6.91051C14.5219 5.62973 15.1212 4.46011 14.7039 2.18853C14.016 -1.56199 9.57759 0.645137 8.42247 0.645137C7.26574 0.645137 2.8273 -1.56199 2.13939 2.18853C1.72213 4.46011 2.32144 5.62973 2.88691 6.91051H13.9564Z"
+                                fill="#4D2483"></path>
+                              <path d="M9.99799 6.59131H8.43527H8.4095H5.47095V8.60994L9.99799 6.59131Z" fill="#4D2483">
+                              </path>
+                              <path d="M11.3738 7.79004L5.47095 10.4225V12.2462L11.3738 9.6154V7.79004Z" fill="#4D2483">
+                              </path>
+                              <path
+                                d="M6.32178 13.6799L8.40969 15.0977V15.117L8.42258 15.1074L8.43547 15.117V15.0977L11.374 13.1032V11.4277L6.32178 13.6799Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Пломбы, импланты
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32497" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32497)">
+                              <path
+                                d="M5.11137 13.0199C5.11137 13.0196 5.11156 13.0193 5.11186 13.0191C6.15398 12.4886 7.12043 11.8222 7.98937 11.0375C8.0591 10.9695 8.01948 10.8555 7.92599 10.8281C7.50897 10.706 7.12795 10.4811 6.81895 10.1709L5.99537 9.33932C5.60511 8.94528 4.96872 8.94409 4.57699 9.33667L1.22164 12.6993C0.926121 12.996 0.926121 13.4783 1.22164 13.7764C1.29393 13.849 1.37899 13.9049 1.47205 13.9429C1.48336 13.9475 1.49094 13.9584 1.49094 13.9706C1.49094 13.9868 1.5041 14 1.52033 14H12.5104C12.7808 14 13 13.7808 13 13.5104C13 13.24 12.7808 13.0208 12.5104 13.0208H5.11228C5.11177 13.0208 5.11137 13.0204 5.11137 13.0199ZM8.65609 9.94583C9.08407 9.94583 9.4946 9.77629 9.79885 9.47229L12.4567 6.80395C12.6434 6.61653 12.7482 6.36277 12.7482 6.09824V3.4576C12.7482 2.56065 11.6585 2.11727 11.0323 2.7594L6.67311 7.22907C6.29196 7.61987 6.29466 8.24413 6.67916 8.63163L7.51479 9.47377C7.81758 9.7763 8.2281 9.94583 8.65609 9.94583ZM9.80839 5.64382C9.99987 5.45158 10.3111 5.45158 10.5026 5.64382L11.28 6.42425C11.4704 6.61542 11.4704 6.92456 11.28 7.11573C11.0885 7.30796 10.7772 7.30796 10.5857 7.11572L9.80839 6.33528C9.61799 6.14412 9.61799 5.83499 9.80839 5.64382Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Операция
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32502" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32502)">
+                              <path
+                                d="M1.00002 7.32704V3.47723V3.47722C0.996833 3.01997 1.33923 2.63658 1.78752 2.59544L1.78752 2.59544C3.87453 2.42943 5.85527 1.59254 7.44263 0.206088C7.76499 -0.0686962 8.23502 -0.0686961 8.55737 0.206088V0.206088C10.1445 1.59291 12.1254 2.42985 14.2125 2.59544C14.6609 2.63702 15.0032 3.02068 15 3.47812V7.32793V7.32794C14.9026 11.3405 12.2542 14.825 8.45761 15.936C8.15861 16.0213 7.84225 16.0213 7.54324 15.936C3.74599 14.8253 1.09713 11.3401 1.00003 7.32704L1.00002 7.32704Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Укрепление
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32507" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32507)">
+                              <path
+                                d="M13.4617 3.20395L11.0161 4.57774C10.5846 4.21719 10.0848 3.93245 9.53802 3.74479V1H6.46177V3.74479C5.91492 3.93245 5.41513 4.21728 4.98364 4.57774L2.53812 3.20395L1 5.7959L3.44326 7.16839C3.39137 7.43816 3.36297 7.71581 3.36297 8.00005C3.36297 8.28419 3.39137 8.56194 3.44326 8.83161L1 10.2041L2.53812 12.796L4.98364 11.4223C5.41513 11.7828 5.91492 12.0675 6.46177 12.2552V15H9.53802V12.2552C10.0849 12.0675 10.5847 11.7828 11.0162 11.4223L13.4618 12.796L14.9999 10.2041L12.5566 8.83161C12.6085 8.56194 12.6369 8.28419 12.6369 8.00005C12.6369 7.71591 12.6085 7.43816 12.5566 7.16849L15 5.796L13.4617 3.20395ZM7.9999 9.5184C7.13927 9.5184 6.43921 8.83719 6.43921 7.99995C6.43921 7.16261 7.13937 6.4815 7.9999 6.4815C8.86043 6.4815 9.56058 7.16271 9.56058 7.99995C9.56058 8.83729 8.86043 9.5184 7.9999 9.5184Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Аллергики
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32512" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32512)">
+                              <path
+                                d="M8.57437 6.35996L8.57437 7.1644C8.57437 7.41989 8.62686 7.63425 8.73047 7.80124C8.87338 8.03171 9.10796 8.16379 9.37432 8.16379C9.63527 8.16379 9.8946 8.04025 10.145 7.79684L12.8784 5.13987C13.4785 4.5565 13.4785 3.60729 12.8784 3.02391L10.145 0.366942C9.8946 0.123413 9.63527 1.05525e-08 9.37432 1.02336e-08C8.9761 9.74698e-09 8.57437 0.309081 8.57437 0.999386L8.57437 1.72997C4.69368 1.95275 1.48107 4.84764 1.00361 8.63778C0.976866 8.84945 1.10069 9.05209 1.30476 9.13058C1.36252 9.1528 1.42268 9.16354 1.48208 9.16354C1.63252 9.16354 1.77845 9.09506 1.87138 8.97164C3.15205 7.27072 5.20831 6.25522 7.37181 6.25522C7.77266 6.25522 8.17578 6.29038 8.57437 6.35996Z"
+                                fill="#4D2483"></path>
+                              <path
+                                d="M15.0891 6.8694C14.885 6.79079 14.6522 6.85622 14.5224 7.02846C13.2419 8.72926 11.1856 9.74476 9.02214 9.74476C8.62129 9.74476 8.21818 9.7096 7.81958 9.64002L7.81958 8.83558C7.81958 8.14528 7.41773 7.8362 7.01963 7.8362C6.75868 7.8362 6.49935 7.95973 6.24882 8.20326L3.51543 10.8601C2.91541 11.4435 2.91541 12.3927 3.51556 12.9762L6.24882 15.633C6.49935 15.8766 6.75868 16 7.01963 16C7.41773 16 7.81958 15.6909 7.81958 15.0006L7.81958 14.27C11.7004 14.0472 14.9129 11.1523 15.3903 7.36232C15.4171 7.15053 15.2933 6.94789 15.0891 6.8694Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Менять специалиста
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1751_32517" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="16" height="16">
+                              <path d="M16 0H0V16H16V0Z" fill="#52B84B"></path>
+                            </mask>
+                            <g mask="url(#mask0_1751_32517)">
+                              <path
+                                d="M8 0L10.0365 5.96353L16 8L10.0365 10.0365L8 16L5.96353 10.0365L0 8L5.96353 5.96353L8 0Z"
+                                fill="#4D2483"></path>
+                            </g>
+                          </svg>
+                          Отбеливание
+                        </div>
+                        <div class="calendar__category">
+                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4.77726 7.22572L7.00386e-05 12.0029L2.64163 14.6445L7.41882 9.86727L12.1997 14.6482L14.8413 12.0066L10.0604 7.22571L14.8413 2.44478L12.1997 -0.196777L7.41882 4.58416L2.64163 -0.193033L6.95026e-05 2.44853L4.77726 7.22572Z"
+                              fill="#4D2483"></path>
+                          </svg>
+                          Любое посещение нельзя
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calendar__category-table-container">
+                  <p class="calendar__category-title">Характеристика дней в феврале</p>
+                  <ul class="options__content-options-container">
+                    <li class="options__content-option">
+                      <p class="options__content-option-title"><mark class="mark-calendar"><span
+                            class="calendar__green-text">Идеальные
+                            дни</span> для чисток и отбеливания</mark></p>
+                      <p class="options__content-option-subtitle">10 (с 09:57), 11
+                      </p>
+                    </li>
+                    <li class="options__content-option">
+                      <div class="options__content-option-title-container">
+                        <p class="options__content-option-title"><mark class="mark-calendar"><span
+                              class="calendar__green-text">Идеальные
+                              дни</span> для лечения и обследования с
+                            использованием
+                            новейших методик и оборудования, посещения новых специалистов</mark></p>
+
+                      </div>
+                      <p class="options__content-option-subtitle">18,19</p>
+                    </li>
+                    <div class="calendar__table-section"></div>
+                    <li class="options__content-option">
+                      <div class="options__content-option-title-container">
+                        <p class="options__content-option-title"><mark class="mark-calendar"><span
+                              class="calendar__orange-text">Дни, не
+                              благоприятные</span> для проведения имплантации, протезирования,
+                            манипуляций у ортодонта</mark></p>
+                      </div>
+                      <p class="options__content-option-subtitle">3, 4, 5, 6, 7, 8, 9, 10 ( до 09:56),
+                        11 ( с 08:18), 14 ( с 18:28), 15, 16, 17,
+                        18 (до 10:29), 20, 21 ( до 13:02),
+                        22 (с 08:14), 23, 24, 25, 26(до 18:47),
+                        28 (до 11:26)</p>
+                    </li>
+                    <div class="calendar__table-section"></div>
+                    <li class="options__content-option">
+                      <div class="options__content-option-title-container">
+                        <p class="options__content-option-title"><mark class="mark-calendar"><span
+                              class="calendar__red-text">Категорически
+                              нельзя</span> для чисток и отбеливания</mark></p>
+                      </div>
+                      <p class="options__content-option-subtitle">10 (с 09:57), 11</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <div class="footer">
+
+  <footer class="footer">
     <div class="footer__wrap">
       <div class="footer-top">
         <div class="container"><a class="logo" href="./"><img class="" data-src="./img/logo.svg" alt=""
@@ -257,8 +843,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
   <script src="./js/header.js"></script>
+  <script src="./js/accordion.js"></script>
   <script src="./js/videotube.min.js"></script>
 </body>
 
