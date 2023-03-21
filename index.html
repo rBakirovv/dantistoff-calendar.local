@@ -123,9 +123,24 @@
         </div>
       </div>
     </section>
+    <section class="plan">
+      <div class="plan__container">
+        <img src="./images/plan-doctor-image.png" class="plan__doctor-image">
+        <div class="plan__modal-container">
+          <h4 class="plan__modal-title"><span class="semi-bold-span">Персональный план</span>
+            лечения по лунному
+            календарю</h4>
+          <p class="plan__modal-subtitle">
+            Составим <span class="plan__modal-subtitle-span">индивидуальный план лечения</span>
+            по лунному календарю 2023
+          </p>
+          <a href="/" class="link-inherit orange-button plan__orange-button">Составить план</a>
+        </div>
+      </div>
+    </section>
     <section class="calendar">
       <div class="calendar-blur-bg"></div>
-      <img src="./images/moon-bg-mob.png" class="calendar-moon-bg"/>
+      <img src="./images/moon-bg-mob.png" class="calendar-moon-bg" />
       <div class="calendar__container">
         <h2 class="calendar__title">Лунный календарь <span class="calendar__title-span">2023</span></h2>
         <ul class="accordions-list calendar-accordions-list">
@@ -708,6 +723,28 @@
         </ul>
       </div>
     </section>
+    <section id="map" class="map">
+      <div class="contacts__container">
+        <h4 class="contacts__title">Контакты</h4>
+        <div class="contacts__links-container">
+          <a href="/" class="contacts__link-container link-inherit">
+            <img class="contacts__link-image" src="./images/contacts-call.svg" alt="Телефон">
+            <p class="contacts__link-title">+7 (495) 324-44-47</p>
+            <p class="contacts__link-subtitle">Звоните с 9:00 до 21:00</p>
+          </a>
+          <a href="/" class="contacts__link-container link-inherit">
+            <img class="contacts__link-image" src="./images/contacts-geo.svg" alt="Метро">
+            <p class="contacts__link-title no-events">6 клиник рядом с метро</p>
+            <p class="contacts__link-subtitle no-events">Контакты и схема проезда</p>
+          </a>
+          <a href="/" class="contacts__link-container link-inherit">
+            <img class="contacts__link-image" src="./images/contacts-chat.svg" alt="Обратная связь">
+            <p class="contacts__link-title">info@dantistoff.ru</p>
+            <p class="contacts__link-subtitle">Пишите</p>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -844,9 +881,12 @@
       </div>
     </div>
   </footer>
+  <script src="./js/map.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/accordion.js"></script>
   <script src="./js/videotube.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=c9ed032f-0f47-41ae-8390-9122eafcd244&lang=ru_RU"
+    type="text/javascript"></script>
 </body>
 
 </html>
