@@ -2267,3 +2267,130 @@
     letter-spacing: 0.3em;
   }
 }
+
+/* mobile-nav */
+
+.mobile-nav {
+  font-family: 'Jost';
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+  z-index: 1999;
+  display: none
+}
+
+.mobile-nav .mobile-nav__header {
+  background-color: #fff;
+  padding: 18px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: sticky;
+  left: 0;
+  top: 0
+}
+
+.mobile-nav__body {
+  overflow: scroll;
+}
+
+.mobile-nav .prize {
+  display: block;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+.mobile-nav .prize__pic {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 100%;
+  -webkit-filter: none;
+  filter: none
+}
+
+.mobile-nav .prize__pic img {
+  width: 110px;
+  height: 110px;
+}
+
+.mobile-nav .stb__buttons-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mobile-nav .prize__text-mobile {
+  text-align: center;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 150%;
+  color: #000;
+  margin: 10px auto 0;
+}
+
+.mobile-nav .stb__transparent-button {
+  color: #FC8E28;
+}
+
+.mobile-nav .stb__transparent-button:active {
+  color: #fff;
+}
+
+.mobile-nav__clinics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #666666;
+  margin-top: 23px;
+}
+
+.mobile-nav__clinics .mobile-nav__clinics-span {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.mobile-nav__phone {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin: 33px auto 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .mobile-nav.active {
+    display: block
+  }
+}
