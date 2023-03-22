@@ -165,7 +165,7 @@
             Составим <span class="plan__modal-subtitle-span">индивидуальный план лечения</span>
             по лунному календарю 2023
           </p>
-          <a href="/" class="link-inherit orange-button plan__orange-button">Составить план</a>
+          <div class="link-inherit orange-button plan__orange-button">Составить план</div>
         </div>
       </div>
     </section>
@@ -912,6 +912,151 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup popup-quiz">
+    <div class="popup-quiz__container">
+      <div class="popup-close">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_2001_16910" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22"
+            height="22">
+            <rect x="1" y="1" width="20" height="20" fill="#D9D9D9" stroke="black" stroke-width="2"></rect>
+          </mask>
+          <g mask="url(#mask0_2001_16910)">
+            <path d="M20.5145 2.09202L1.40381 21.2027" stroke="rgba(252, 142, 40, 1)" stroke-width="2"></path>
+            <path d="M20.656 21.3442L1.26245 1.95058" stroke="rgba(252, 142, 40, 1)" stroke-width="2"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="popup-quiz__steps-container">
+        <!-- Шаг 1 -->
+        <form id="quiz-step-1" class="popup-quiz__step popup-quiz__step_active">
+          <div class="popup-quiz__step-number">
+            Шаг 1
+          </div>
+          <h4 class="popup-quiz__step-title">Введите ваши данные</h4>
+          <div class="popup-quiz__step-content popup-quiz__step-grid">
+            <div class="quiz__input-container">
+              <label class="quiz__input-label">Ваше имя</label>
+              <input class="quiz__input input-valid" id="quiz-name" placeholder="Введите данные" type="text" name="name"
+                required>
+              <div class="input-valid-icon"></div>
+              <div class="input-invalid-icon"></div>
+            </div>
+            <div class="quiz__input-container">
+              <label class="quiz__input-label">Дата рождения</label>
+              <input class="quiz__input input-invalid" id="quiz-birthday" placeholder="05.09.1982" type="text"
+                name="birthday" required>
+              <div class="input-valid-icon"></div>
+              <div class="input-invalid-icon"></div>
+            </div>
+            <div class="quiz__input-container">
+              <label class="quiz__input-label">Пол</label>
+              <input class="quiz__input" id="quiz-sex" placeholder="Выберите из списка" type="text" name="sex" readonly
+                required>
+              <div class="quiz__input-dropdown-icon no-events"></div>
+              <div class="quiz__input-dropdown">
+                <div class="quiz__input-dropdown-item">Мужской</div>
+                <div class="quiz__input-dropdown-item">Женский</div>
+              </div>
+            </div>
+          </div>
+          <button type="submit"
+            class="link-inherit orange-button quiz__orange-button quiz__orange-button-next">Следующий шаг
+          </button>
+        </form>
+        <!-- Шаг 2 -->
+        <form id="quiz-step-2" class="popup-quiz__step">
+          <div class="popup-quiz__step-number">
+            Шаг 2
+          </div>
+          <h4 class="popup-quiz__step-title">Какое лечение Вы планируете?</h4>
+          <div class="popup-quiz__step-content popup-quiz__step-grid">
+            <div class="quiz__option">
+              Имплантация
+            </div>
+            <div class="quiz__option">
+              Протезирование
+            </div>
+            <div class="quiz__option">
+              Гигиена и профилактика
+            </div>
+            <div class="quiz__option">
+              Отбеливание
+            </div>
+            <div class="quiz__option">
+              Удаление зубов
+            </div>
+            <div class="quiz__option">
+              Ортодонтия
+            </div>
+            <div class="quiz__option">
+              Лечение десен
+            </div>
+            <div class="quiz__option">
+              Лечение зубов
+            </div>
+            <div class="quiz__option">
+              Хирургия
+            </div>
+          </div>
+          <button type="submit"
+            class="link-inherit orange-button quiz__orange-button quiz__orange-button-next">Следующий шаг</button>
+          <div class="quiz__back-button">
+            Предыдущий шаг
+          </div>
+        </form>
+        <!-- Шаг 3 -->
+        <form id="quiz-step-3" class="popup-quiz__step">
+          <div class="popup-quiz__step-number popup-quiz__step-number_centered">
+            Шаг 3
+          </div>
+          <img src="./images/last-step.svg" class="quiz__last-step-image" alt="Успешно">
+          <h4 class="popup-quiz__step-title">Отлично, последний шаг!</h4>
+          <p class="popup-quiz__step-subtitle">Укажите свой номер телефона и мы отправим Вам <span
+              class="semi-bold-span">персональный план лечения</span>
+            по лунному календарю</p>
+          <div class="quiz__input-container">
+            <label class="quiz__input-label">Телефон</label>
+            <input class="quiz__input" id="quiz-tel" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" type="tel" name="tel" required>
+            <div class="input-valid-icon"></div>
+            <div class="input-invalid-icon"></div>
+          </div>
+          <button type="submit"
+            class="link-inherit orange-button quiz__orange-button quiz__orange-button-close">Закрыть</button>
+          <div class="quiz__checkbox-container">
+            <input class="quiz__checkbox" type="checkbox" required>
+            С политикой конфиденциальности ознакомлен
+          </div>
+        </form>
+      </div>
+      <div class="popup-quiz__doctor-container">
+        <div class="popup-quiz__doctor-info">
+          <div class="popup-quiz__doctor-image-container">
+            <img src="./images/quiz-doc.png" class="popup-quiz__doctor-image" alt="Константинов 
+            Константин Константинович">
+          </div>
+          <div>
+            <p class="popup-quiz__doctor-name">Константинов <br>
+              Константин Константинович
+            </p>
+            <p class="popup-quiz__doctor-position">Хирург-имплантолог</p>
+          </div>
+        </div>
+        <div class="popup-quiz__doctor-text">
+          <span class="normal-span">Составим для вас <span class="purple-text">персональный
+              план лечения</span> по лунному
+            календарю
+          </span>
+          <br>
+          Планируете визит к стоматологу
+          в соответствии с лунным календарем — полезная информация о благоприятных лунных днях
+        </div>
+        <img src="./images/logo-mob.svg" class="popup-quiz__logo" alt="Дантистофф">
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/quiz.js"></script>
   <script src="./js/burger.js"></script>
   <script src="./js/map.js"></script>
   <script src="./js/header.js"></script>
