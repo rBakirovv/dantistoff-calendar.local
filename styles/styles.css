@@ -1853,6 +1853,15 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .calendar::before {
+    height: 120px;
+    background: linear-gradient(180deg, rgba(6, 17, 27, 0) 0%, rgba(6, 17, 27, 0.493997) 36.27%, rgba(6, 17, 27, 0.81) 69.09%, #06111B 100%);
+  }
+
+  .calendar__container {
+    padding-bottom: 100px;
+  }
+
   .calendar__calendar-info-container {
     flex-direction: column;
     gap: 20px;
@@ -1886,14 +1895,10 @@
 
 @media screen and (max-width: 500px) {
   .calendar {
-    background-image: none;
+    background-image: url(../images/calendar-bg-mob.png);
   }
 
   .calendar::after {
-    display: none;
-  }
-
-  .calendar::before {
     display: none;
   }
 
@@ -1906,7 +1911,7 @@
   }
 
   .calendar__container {
-    padding: 40px 4px;
+    padding: 40px 4px 100px;
   }
 
   .calendar__title {
@@ -3022,5 +3027,99 @@
 
   #quiz-step-3 .quiz__input-container {
     margin: 20px auto 0;
+  }
+}
+
+/* seo-text */
+
+.seo-text {
+  position: relative;
+  background-color: #06111B;
+  padding-bottom: 135px;
+}
+
+.seo-text__container {
+  max-width: 1320px;
+  transform: translateY(-60px);
+  margin: 0 auto;
+}
+
+.seo-text__title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.seo-text__subtitle {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin: 40px 0 0;
+}
+
+.seo-text__paragraph {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin: 15px 0 0;
+}
+
+.seo-text__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 14px;
+  margin: 15px 0 0;
+}
+
+.seo-text__list-item {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.seo-text__list-item::marker {
+  color: #307DDB;
+}
+
+@media screen and (max-width: 1000px) {
+  .seo-text {
+    padding: 0 40px 20px;
+  }
+
+  .seo-text__container {
+    transform: translateY(-30px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .seo-text__title {
+    font-size: 32px;
+    line-height: 135%;
+  }
+
+  .seo-text__subtitle {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .seo-text {
+    padding: 0 16.5px 0;
   }
 }
