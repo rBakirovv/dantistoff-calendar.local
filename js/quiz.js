@@ -10,6 +10,14 @@ window.addEventListener("DOMContentLoaded", function () {
   const stepSecond = quiz.querySelector("#quiz-step-2");
   const stepLast = quiz.querySelector("#quiz-step-3");
 
+  const nameInput = quiz.querySelector("#quiz-name");
+  const birthdayInput = quiz.querySelector("#quiz-birthday");
+  const telInput = quiz.querySelector("#quiz-tel");
+
+  const nameRegex = /^[А-Яа-яa-zA-Z- ]{1,30}$/;
+  const dateRegex = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
+  const regexPhone = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+
   function openQuiz() {
     popupQuiz.classList.add("popup_opened");
   }
@@ -37,6 +45,9 @@ window.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", () => {
       sexDropdown.parentNode.querySelector(".quiz__input-dropdown").classList.remove("quiz__input-dropdown_active");
       sexDropdown.value = item.textContent;
+
+      sexDropdown.classList.remove("input-invalid");
+      sexDropdown.classList.add("input-valid");
     })
   })
 
@@ -48,8 +59,15 @@ window.addEventListener("DOMContentLoaded", function () {
 
   stepFirst.addEventListener("submit", (e) => {
     e.preventDefault();
-    stepFirst.classList.remove("popup-quiz__step_active");
-    stepSecond.classList.add("popup-quiz__step_active");
+    if (nameRegex.test(nameInput.value) && dateRegex.test(birthdayInput.value)) {
+      if (sexDropdown.value !== "") {
+        stepFirst.classList.remove("popup-quiz__step_active");
+        stepSecond.classList.add("popup-quiz__step_active");
+      } else {
+        sexDropdown.classList.remove("input-valid");
+        sexDropdown.classList.add("input-invalid");
+      }
+    }
   })
 
   stepSecond.addEventListener("submit", (e) => {
@@ -68,7 +86,127 @@ window.addEventListener("DOMContentLoaded", function () {
 
   stepLast.addEventListener("submit", (e) => {
     e.preventDefault();
-    closeQuiz();
-    stepLast.classList.remove("popup-quiz__step_active");
+
+    if (telInput.classList.contains("input-valid")) {
+      closeQuiz();
+      stepLast.classList.remove("popup-quiz__step_active");
+      stepFirst.classList.add("popup-quiz__step_active");
+
+      return
+    }
+
+    if (!telInput.classList.contains("input-valid")) {
+      telInput.classList.remove("input-valid");
+      telInput.classList.add("input-invalid");
+    }
+
+    if (telInput.classList.contains("input-valid")) {
+      telInput.classList.remove("input-invalid");
+      telInput.classList.add("input-valid");
+    }
   })
+
+  nameInput.addEventListener("input", (e) => {
+    if (nameRegex.test(e.target.value)) {
+      nameInput.classList.remove("input-invalid");
+      nameInput.classList.add("input-valid");
+    } else {
+      if (nameInput.classList.contains("input-valid")) {
+        nameInput.classList.remove("input-valid");
+        nameInput.classList.add("input-invalid");
+      }
+    }
+  })
+
+  birthdayInput.addEventListener("input", (e) => {
+    if (dateRegex.test(e.target.value)) {
+      birthdayInput.classList.remove("input-invalid");
+      birthdayInput.classList.add("input-valid");
+    } else {
+      if (birthdayInput.classList.contains("input-valid")) {
+        birthdayInput.classList.remove("input-valid");
+        birthdayInput.classList.add("input-invalid");
+      }
+    }
+  })
+
+  // phone 
+
+  var getInputNumbersValue = function (input) {
+    return input.value.replace(/\D/g, '');
+  }
+
+  var onPhonePaste = function (e) {
+    var input = e.target,
+      inputNumbersValue = getInputNumbersValue(input);
+    var pasted = e.clipboardData || window.clipboardData;
+    if (pasted) {
+      var pastedText = pasted.getData('Text');
+      if (/\D/g.test(pastedText)) {
+        input.value = inputNumbersValue;
+        return;
+      }
+    }
+  }
+
+  var onPhoneInput = function (e) {
+    var input = e.target,
+      inputNumbersValue = getInputNumbersValue(input),
+      selectionStart = input.selectionStart,
+      formattedInputValue = "";
+
+    if (!inputNumbersValue) {
+      return input.value = "";
+    }
+
+    if (input.value.length != selectionStart) {
+      if (e.data && /\D/g.test(e.data)) {
+        input.value = inputNumbersValue;
+      }
+      return;
+    }
+
+    if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
+      if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
+      var firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
+      formattedInputValue = input.value = firstSymbols + " ";
+      if (inputNumbersValue.length > 1) {
+        formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+      }
+      if (inputNumbersValue.length >= 5) {
+        formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+      }
+      if (inputNumbersValue.length >= 8) {
+        formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
+      }
+      if (inputNumbersValue.length >= 10) {
+        formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
+      }
+    } else {
+      formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
+    }
+
+    input.value = formattedInputValue;
+
+    if (regexPhone.test(formattedInputValue)) {
+      telInput.classList.remove("input-invalid");
+      telInput.classList.add("input-valid");
+    } else {
+      if (telInput.classList.contains("input-valid")) {
+        telInput.classList.remove("input-valid");
+        telInput.classList.add("input-invalid");
+      }
+    }
+  }
+
+  var onPhoneKeyDown = function (e) {
+    var inputValue = e.target.value.replace(/\D/g, '');
+    if (e.keyCode == 8 && inputValue.length == 1) {
+      e.target.value = "";
+    }
+  }
+
+  telInput.addEventListener('keydown', onPhoneKeyDown);
+  telInput.addEventListener('input', onPhoneInput, false);
+  telInput.addEventListener('paste', onPhonePaste, false);
 })

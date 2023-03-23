@@ -2872,6 +2872,7 @@
 
 #quiz-step-3 .quiz__input-container {
   margin: 20px 0;
+  width: max-content;
 }
 
 .quiz__checkbox-container {
@@ -2897,9 +2898,8 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1500px) {
   .popup-quiz__container {
-    max-width: none;
     margin: 0 20px;
   }
 
@@ -2914,6 +2914,12 @@
 
   .popup-quiz__logo {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .popup-quiz__container {
+    max-width: none;
   }
 }
 
