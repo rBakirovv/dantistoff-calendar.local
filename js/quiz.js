@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
   const popupQuiz = document.querySelector(".popup-quiz");
-  const quiz = document.querySelector(".popup-quiz__container");
+  const quiz = document.querySelector(".quiz__container");
   const planButton = document.querySelector(".plan__orange-button");
   const sexDropdown = quiz.querySelector("#quiz-sex");
   const sexDropdownItem = quiz.querySelectorAll(".quiz__input-dropdown-item");
@@ -61,8 +61,8 @@ window.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     if (nameRegex.test(nameInput.value) && dateRegex.test(birthdayInput.value)) {
       if (sexDropdown.value !== "") {
-        stepFirst.classList.remove("popup-quiz__step_active");
-        stepSecond.classList.add("popup-quiz__step_active");
+        stepFirst.classList.remove("quiz__step_active");
+        stepSecond.classList.add("quiz__step_active");
       } else {
         sexDropdown.classList.remove("input-valid");
         sexDropdown.classList.add("input-invalid");
@@ -73,15 +73,17 @@ window.addEventListener("DOMContentLoaded", function () {
   stepSecond.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (stepSecond.querySelectorAll(".quiz__option_active").length > 0) {
-      stepSecond.classList.remove("popup-quiz__step_active");
-      stepLast.classList.add("popup-quiz__step_active");
-    }
+    stepSecond.classList.remove("quiz__step_active");
+    stepLast.classList.add("quiz__step_active");
+
+    /*
+    if (stepSecond.querySelectorAll(".quiz__option_active").length > 0) {}
+    */
   })
 
   stepSecond.querySelector(".quiz__back-button").addEventListener("click", () => {
-    stepSecond.classList.remove("popup-quiz__step_active");
-    stepFirst.classList.add("popup-quiz__step_active");
+    stepSecond.classList.remove("quiz__step_active");
+    stepFirst.classList.add("quiz__step_active");
   })
 
   stepLast.addEventListener("submit", (e) => {
@@ -89,8 +91,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     if (telInput.classList.contains("input-valid")) {
       closeQuiz();
-      stepLast.classList.remove("popup-quiz__step_active");
-      stepFirst.classList.add("popup-quiz__step_active");
+      stepLast.classList.remove("quiz__step_active");
+      stepFirst.classList.add("quiz__step_active");
 
       return
     }
