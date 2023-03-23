@@ -2,19 +2,17 @@ window.addEventListener("DOMContentLoaded", function () {
   ymaps.ready(init);
 
   function init() {
-    var myMap = new ymaps.Map("map", {
-        center: [55.732120, 37.588526],
-        zoom: 16,
-      }),
-      myStreet1 = new ymaps.Placemark(
-        [55.732120, 37.588526], {}, {
-          iconLayout: "default#image",
-          iconImageHref: "images/map-icon.svg",
-          iconImageSize: [102, 102],
-          iconImageOffset: [-30, -60],
-        }
-      );
-    myMap.geoObjects.add(myStreet1);
+    let center;
+    if (window.innerWidth > 981) {
+      center = [55.757704, 37.318759];
+    } else {
+      center = [55.489311, 37.595243]
+    }
+    const myMap = new ymaps.Map('map', {
+      center: center,
+      zoom: window.innerWidth > 981 ? 10.5 : 10.2
+    });
+
     myMap.behaviors.disable("scrollZoom");
   }
 })
