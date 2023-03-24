@@ -1133,6 +1133,8 @@
 .footer {
   font-family: 'Jost';
   background: #06111B;
+  position: relative;
+  z-index: 10;
 }
 
 .footer__wrap {
@@ -2125,7 +2127,7 @@
 .map {
   position: relative;
   width: 100%;
-  height: 1200px;
+  height: 1600px;
   background-color: #06111B;
   padding-top: 140px;
   margin-top: -1px;
@@ -2147,7 +2149,7 @@
 .map::before {
   content: "";
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   pointer-events: none;
   bottom: -1px;
   left: 0;
@@ -2167,13 +2169,8 @@
 
 @media screen and (max-width: 1000px) {
   .map {
-    height: calc(770px + 1630px);
+    height: calc(770px + 1930px);
     padding-top: 0;
-    padding-bottom: 40px;
-  }
-
-  .map::before {
-    bottom: 39px;
   }
 
   .map::after {
@@ -3130,6 +3127,7 @@
 .map-panel {
   position: absolute;
   z-index: 3;
+  pointer-events: none;
   width: 100%;
   top: 290px;
   left: 0;
@@ -3145,6 +3143,7 @@
 .map-accordions-list {
   display: flex;
   flex-direction: column;
+  pointer-events: all;
   gap: 15px;
   max-width: 537px;
 }
@@ -3281,6 +3280,27 @@
   margin: 20px auto 0;
 }
 
+.map-panel__metro-icon.--orange {
+  fill: #FC8E28;
+}
+
+.map-panel__metro-icon.--purple {
+  fill: #7C50C4;
+}
+
+.map-panel__metro-icon.--yellow {
+  fill: #EFC748;
+}
+
+.map-panel__metro-icon.--grey {
+  fill: #A3A5B3;
+}
+
+#map-email {
+  position: relative;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
   .map-panel__container {
     max-width: none;
@@ -3335,4 +3355,182 @@
   .map__orange-button {
     width: 291px;
   }
+}
+
+/* copy */
+
+.card__scheme {
+  width: 225px;
+  position: relative;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.scheme__coord {
+  position: relative;
+  height: 23px;
+}
+
+.scheme__coord::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 25px;
+  left: 0;
+  bottom: -2px;
+}
+
+.map-panel__panel-coordinates:hover .scheme__coord-copy {
+  opacity: 1;
+}
+
+.scheme__coord {
+  cursor: pointer;
+}
+
+.scheme__coord-copy {
+  width: max-content;
+  height: 28px;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  line-height: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40px;
+  transition: all 0.4s ease-in-out;
+}
+
+.scheme__coord-copy-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+}
+
+.scheme__coord-copy_active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scheme__coord-copy-container:before {
+  content: "";
+  border: solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-top-color: #eee;
+  border-width: 9px;
+  margin-left: -9px;
+}
+
+.scheme__email-copy {
+  width: max-content;
+  height: 28px;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  line-height: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40px;
+  transition: all 0.4s ease-in-out;
+}
+
+.scheme__email-copy-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #eee;
+  color: #FC8E28;
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+}
+
+.scheme__email-copy-container:before {
+  content: "";
+  border: solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-top-color: #eee;
+  border-width: 9px;
+  margin-left: -9px;
+}
+
+.card__email {
+  align-items: flex-start;
+}
+
+.scheme__email {
+  cursor: pointer;
+}
+
+.card__email-hover {
+  cursor: pointer;
+}
+
+#map-email {
+  width: max-content;
+}
+
+#map-email:hover .scheme__email-copy {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .scheme__coord-copy {
+    bottom: -17.5px;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .scheme__email-copy {
+    bottom: 0px;
+    white-space: nowrap;
+    left: 50%;
+    bottom: -1.25px;
+    transform: translateX(-50%);
+  }
+}
+
+.scheme__email-copy_active {
+  opacity: 1;
+}
+
+.scheme__info,
+.scheme__coord {
+  text-decoration: none;
+  border-bottom: 1px dashed #4782cd;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.scheme__coord:hover {
+  border-bottom: 1px dashed transparent;
+}
+
+.card__link {
+  display: block;
+  color: #4782cd;
+  text-decoration: none;
+  border-bottom: 1px solid #4782cd;
+  transition: all 0.4s ease-in-out;
+  font-weight: 400;
+}
+
+.card__link:hover {
+  border-bottom: 1px solid transparent;
 }
