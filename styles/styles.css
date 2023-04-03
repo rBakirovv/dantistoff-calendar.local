@@ -1980,7 +1980,7 @@
 .plan__doctor-image {
   position: absolute;
   bottom: -50px;
-  left: 20%;
+  left: 17%;
 }
 
 .plan__modal-container {
@@ -2041,7 +2041,7 @@
   font-weight: 300;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1600px) {
   .plan__doctor-image {
     left: 0px;
   }
@@ -2093,7 +2093,7 @@
   .plan__doctor-image {
     z-index: 1;
     width: 100%;
-    top: 120px;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
