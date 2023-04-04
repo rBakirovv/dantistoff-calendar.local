@@ -18,6 +18,11 @@ window.addEventListener("DOMContentLoaded", function () {
   const dateRegex = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
   const regexPhone = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 
+  let nameInputValue;
+  let birthdayInputValue;
+  let sexDropdownValue;
+  let secondStepArray = [];
+
   function openQuiz() {
     popupQuiz.classList.add("popup_opened");
   }
@@ -61,6 +66,10 @@ window.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     if (nameRegex.test(nameInput.value) && dateRegex.test(birthdayInput.value)) {
       if (sexDropdown.value !== "") {
+        nameInputValue = nameInput.value;
+        birthdayInputValue = birthdayInput.value;
+        sexDropdownValue = sexDropdown.value;
+
         stepFirst.classList.remove("quiz__step_active");
         stepSecond.classList.add("quiz__step_active");
       } else {
@@ -70,8 +79,12 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   })
 
+  let optionsArray = [];
+
   stepSecond.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    secondStepArray = document.querySelectorAll(".quiz__option_active");
 
     stepSecond.classList.remove("quiz__step_active");
     stepLast.classList.add("quiz__step_active");
@@ -89,10 +102,33 @@ window.addEventListener("DOMContentLoaded", function () {
   stepLast.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    secondStepArray.forEach((item) => {
+      optionsArray.push(item.innerText);
+    })
+
     if (telInput.classList.contains("input-valid")) {
       closeQuiz();
+
       stepLast.classList.remove("quiz__step_active");
       stepFirst.classList.add("quiz__step_active");
+
+      const url = 'https://dantistoff.ru/webhook/konkurs_allon4/';
+
+      const data = new URLSearchParams(new FormData());
+
+      data.append('url', window.location.href);
+      data.append('name', nameInputValue);
+      data.append('birthday', birthdayInputValue);
+      data.append('sex', sexDropdownValue);
+      data.append('services', optionsArray.join(', '));
+      data.append('phone', telInput.value);
+
+      setTimeout(() => {
+        const result = fetch(url, {
+          method: 'post',
+          body: data,
+        });
+      }, 100)
 
       return
     }
