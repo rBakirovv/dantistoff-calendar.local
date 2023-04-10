@@ -4254,11 +4254,13 @@ body {
   .prices-accordions-list .accordion-head {
     font-size: 22px;
     line-height: 32px;
+    padding: 24px 20px;
   }
 
   .prices-accordions-sublist .accordion-head {
     font-size: 20px;
     line-height: 115%;
+    padding: 17px 20px;
   }
 
   .prices__list-title {
@@ -4284,5 +4286,14 @@ body {
   .prices__list-price {
     font-size: 18px;
     line-height: 26px;
+  }
+
+  .prices__list-item {
+    padding: 16px 20px;
+  }
+
+  .prices-accordions-list .accordion-head .accordion-arrow-svg {
+    width: 14px;
+    height: 14px;
   }
 }
