@@ -4,6 +4,24 @@ body {
   background-color: #06111B;
 }
 
+.section-title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 130%;
+  text-align: center;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.swiper-wrapper {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .purple-text {
   color: rgba(80, 26, 168, 1);
 }
@@ -28,34 +46,15 @@ body {
   justify-content: center;
   align-items: center;
   color: #FFFFFF;
-  background: #FF8E09;
+  background: rgba(247, 119, 27, 1);
   box-shadow: -4px -4px 17px rgba(247, 119, 27, 0.5);
   border-radius: 500px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
 
-.orange-button::after {
-  content: "Записаться на прием";
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 500px;
-  background: linear-gradient(180deg, #F7771B 0%, #E75D32 100%);
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.4s ease-in-out;
-}
-
-.orange-button:hover::after {
-  opacity: 0;
-}
-
 .orange-button:hover {
-  box-shadow: none;
+  background: #FF8E09;
 }
 
 .orange-button:active {
@@ -123,6 +122,44 @@ body {
 
 .normal-span {
   font-weight: 400;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  margin: 0 !important;
+  transition: all 0.4s ease-in-out;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  margin: 0 !important;
+  transition: all 0.4s ease-in-out;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none !important;
+}
+
+.swiper-button-path {
+  transition: all 0.4s ease-in-out;
 }
 
 /* stb */
@@ -219,13 +256,17 @@ body {
 
 .stb__orange-button {
   font-weight: 300;
-  width: 283px;
+  min-width: 283px;
+  box-sizing: border-box;
+  padding: 0 30px;
   height: 65px;
 }
 
 .stb__transparent-button {
   font-weight: 300;
-  width: 214px;
+  min-width: 214px;
+  box-sizing: border-box;
+  padding: 0 30px;
   height: 65px;
 }
 
@@ -293,6 +334,11 @@ body {
     font-weight: 200;
     font-size: 22px;
     line-height: 160%;
+  }
+
+  .stb__transparent-button {
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 
@@ -485,6 +531,8 @@ body {
   position: relative;
   border-radius: 14px;
   pointer-events: all;
+  max-width: 734px;
+  max-height: 400px;
 }
 
 .doctor-video__video-text {
@@ -1087,8 +1135,10 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  width: 191px;
+  min-width: 191px;
+  box-sizing: border-box;
   height: 46px;
+  padding: 0 30px;
 }
 
 .phone {
@@ -1355,16 +1405,20 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  width: 167px;
+  min-width: 167px;
   height: 46px;
+  box-sizing: border-box;
+  padding: 0 25px;
 }
 
 .footer__orange-button {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  width: 191px;
+  min-width: 191px;
   height: 46px;
+  box-sizing: border-box;
+  padding: 0 25px;
 }
 
 @media screen and (max-width: 1360px) {
@@ -1589,7 +1643,7 @@ body {
 
 .calendar-blur-bg {
   position: absolute;
-  top: 340px;
+  top: 650px;
   left: 50%;
   transform: translateX(-50%);
   width: 99%;
@@ -1962,6 +2016,7 @@ body {
   background-repeat: no-repeat;
   min-height: 870px;
   max-height: 870px;
+  overflow: hidden;
 }
 
 .plan::after {
@@ -1980,10 +2035,10 @@ body {
   position: absolute;
   z-index: 1;
   left: 0;
-  bottom: -1px;
+  bottom: -2px;
   width: 100%;
-  height: 180px;
-  background: linear-gradient(180deg, rgba(6, 17, 27, 0) 0%, rgba(8, 21, 34, 0.493997) 43.56%, #081522 100%);
+  height: 260px;
+  background: linear-gradient(180deg, rgba(6, 17, 27, 0) 0%, rgba(8, 21, 34, 0.493997) 43.56%, rgba(8, 21, 34, 0.853278) 83.64%, #081522 100%);
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
@@ -2047,7 +2102,6 @@ body {
 }
 
 .plan__orange-button::after {
-  content: 'Составить план';
   font-weight: 300;
 }
 
@@ -2434,6 +2488,7 @@ body {
 
 .popup-close {
   position: absolute;
+  z-index: 2;
   top: 0;
   right: -80px;
   display: flex;
@@ -2513,14 +2568,6 @@ body {
   width: 250px;
   height: 58px;
   border: none;
-}
-
-.quiz__orange-button-close::after {
-  content: 'Закрыть';
-}
-
-.quiz__orange-button-next::after {
-  content: 'Следующий шаг';
 }
 
 .quiz__step-number {
@@ -2883,12 +2930,22 @@ body {
 }
 
 .quiz__last-step-image {
+  max-width: 86px;
+  max-height: 86px;
   margin-bottom: 20px;
 }
 
 #quiz-step-3 .quiz__input-container {
   margin: 20px 0;
   width: max-content;
+}
+
+#quiz-step-5 {
+  align-items: center;
+}
+
+#quiz-step-4 {
+  align-items: center;
 }
 
 .quiz__checkbox-container {
@@ -3038,6 +3095,10 @@ body {
   #quiz-step-3 .quiz__input-container {
     margin: 20px auto 0;
   }
+
+  .quiz__orange-button-close {
+    width: 100%;
+  }
 }
 
 /* seo-text */
@@ -3050,7 +3111,7 @@ body {
 
 .seo-text__container {
   max-width: 1320px;
-  transform: translateY(-60px);
+  /*transform: translateY(-60px);*/
   margin: 0 auto;
 }
 
@@ -3108,14 +3169,22 @@ body {
   color: #307DDB;
 }
 
+@media screen and (max-width: 1320px) {
+  .seo-text {
+    padding: 0 40px 135px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .seo-text {
     padding: 0 40px 20px;
   }
 
+  /*
   .seo-text__container {
     transform: translateY(-30px);
   }
+  */
 }
 
 @media screen and (max-width: 500px) {
@@ -3656,12 +3725,7 @@ body {
   color: #F7771B;
 }
 
-@media screen and (max-width: 1360px) {
-  .bussiness__container {
-    max-width: none;
-    padding: 40px;
-  }
-
+@media screen and (max-width: 1600px) {
   .bussiness__image {
     transform: none;
     position: relative;
@@ -3669,6 +3733,13 @@ body {
     right: inherit;
     width: 730px;
     height: 750px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .bussiness__container {
+    max-width: none;
+    padding: 40px;
   }
 
   .bussiness__text-container {
@@ -3707,5 +3778,250 @@ body {
 @media screen and (max-width: 500px) {
   .bussiness__container {
     padding: 0 17.5px 40px;
+  }
+}
+
+/* popup-alert */
+
+.popup-alert {
+  display: flex;
+}
+
+.popup-alert__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 405px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 35px;
+}
+
+.popup-alert__image-success {
+  width: 86px;
+  height: 86px;
+}
+
+.popup-alert__title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  margin: 30px 0 0;
+}
+
+.popup-alert__subtitle {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 175%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  margin: 10px 0 0;
+}
+
+.popup-alert__orange-button {
+  border: none;
+  width: 100%;
+  height: 65px;
+  margin: 20px auto 0;
+}
+
+.popup-alert .popup-close {
+  top: -56px;
+  right: -56px;
+}
+
+/* doctors */
+
+.doctors__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-60px);
+  padding: 0 0 120px;
+}
+
+.doctors__swiper-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.swiper-doctors {
+  display: flex;
+  justify-content: center;
+  max-width: 1362px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.doctors__card-container {
+  width: 424px !important;
+  height: 675px !important;
+  box-sizing: border-box;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 16px 30px 30px;
+}
+
+.doctors__card-image-contaier {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  max-height: 485px;
+}
+
+.doctors__card-info-contaier {
+  padding: 30px 0 0;
+}
+
+.doctors__card-doctor-name {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #06111B;
+  margin: 0;
+}
+
+.doctors__card-doctor-position {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  color: #6E6E6E;
+  margin: 10px 0 0;
+}
+
+.doctors-button-prev {
+  left: -89px !important;
+  width: 65px !important;
+  height: 65px !important;
+  border: 1px solid #A3A5B3;
+}
+
+.doctors-button-prev:hover {
+  background: #FC8E28;
+  border: 1px solid #FC8E28;
+}
+
+.doctors-button-prev:hover .swiper-button-path {
+  stroke: white;
+}
+
+.doctors-button-next {
+  right: -89px !important;
+  width: 65px !important;
+  height: 65px !important;
+  border: 1px solid #A3A5B3;
+}
+
+.doctors-button-next:hover {
+  background: #FC8E28;
+  border: 1px solid #FC8E28;
+}
+
+.doctors-button-next:hover .swiper-button-path {
+  stroke: white;
+}
+
+.doctors-slider-pagination {
+  bottom: -60px !important;
+  max-width: 50%;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.doctors-slider-pagination .swiper-pagination-bullet {
+  background: #A3A5B3;
+}
+
+.doctors-slider-pagination .swiper-pagination-bullet-active {
+  background: #FFFFFF;
+}
+
+@media screen and (max-width: 1600px) {
+  .doctors-button-next {
+    top: inherit !important;
+    bottom: -117px !important;
+    right: 30px !important;
+  }
+
+  .doctors-button-prev {
+    top: inherit !important;
+    bottom: -117px !important;
+    left: 30px !important;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .doctors__container {
+    padding: 0 40px 120px;
+  }
+
+  .doctors__swiper-container {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .swiper-doctors {
+    max-width: none !important;
+    overflow: visible !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .doctors__container {
+    transform: translateY(-30px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .doctors__card-container {
+    width: 316px !important;
+    min-height: 497px !important;
+    height: 100% !important;
+    padding: 12px 16px 16px;
+    margin: 0 7.5px !important;
+  }
+
+  .doctors__card-image-contaier {
+    align-items: flex-start;
+    width: 100%;
+    max-height: 340px;
+    overflow: hidden;
+  }
+
+  .doctors__card-image-contaier img {
+    width: 100%;
+  }
+
+  .doctors__card-info-contaier {
+    padding-top: 16px;
+  }
+
+  .doctors__card-doctor-name {
+    font-size: 22px;
+    line-height: 130%;
+  }
+
+  .doctors__card-doctor-position {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 5px;
   }
 }

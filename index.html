@@ -14,6 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -154,6 +157,21 @@
         </div>
       </div>
     </section>
+    <section class="plan">
+      <div class="plan__container">
+        <img src="./images/plan-doctor-image.png" class="plan__doctor-image">
+        <div class="plan__modal-container">
+          <h4 class="plan__modal-title"><span class="semi-bold-span">Персональный план</span>
+            лечения по лунному
+            календарю</h4>
+          <p class="plan__modal-subtitle">
+            Составим <span class="plan__modal-subtitle-span">индивидуальный план лечения</span>
+            по лунному календарю 2023
+          </p>
+          <div class="link-inherit orange-button plan__orange-button">Составить план</div>
+        </div>
+      </div>
+    </section>
     <section class="bussiness">
       <div class="bussiness__container">
         <div class="bussiness__text-container">
@@ -191,21 +209,6 @@
           </div>
         </div>
         <img class="bussiness__image" src="./images/bussiness.png" alt="">
-      </div>
-    </section>
-    <section class="plan">
-      <div class="plan__container">
-        <img src="./images/plan-doctor-image.png" class="plan__doctor-image">
-        <div class="plan__modal-container">
-          <h4 class="plan__modal-title"><span class="semi-bold-span">Персональный план</span>
-            лечения по лунному
-            календарю</h4>
-          <p class="plan__modal-subtitle">
-            Составим <span class="plan__modal-subtitle-span">индивидуальный план лечения</span>
-            по лунному календарю 2023
-          </p>
-          <div class="link-inherit orange-button plan__orange-button">Составить план</div>
-        </div>
       </div>
     </section>
     <section class="calendar">
@@ -793,6 +796,66 @@
         </ul>
       </div>
     </section>
+    <section class="doctors">
+      <div class="doctors__container">
+        <h2 class="section-title">Врачи</h2>
+        <div class="doctors__swiper-container">
+          <div class="swiper-doctors">
+            <ul class="swiper-wrapper swiper-wrapper-doctors">
+              <li class="swiper-slide doctors__card-container">
+                <div class="doctors__card-image-contaier">
+                  <img src="./images/doctor-1.png" alt="Константин Константинович Константинов">
+                </div>
+                <div class="doctors__card-info-contaier">
+                  <p class="doctors__card-doctor-name">Константин Константинович Константинов</p>
+                  <p class="doctors__card-doctor-position">Главный имплантолог сети, врач стоматолог-хирург, К.М.Н.</p>
+                </div>
+              </li>
+              <li class="swiper-slide doctors__card-container">
+                <div class="doctors__card-image-contaier">
+                  <img src="./images/doctor-2.png" alt="Константин Константинович Константинов">
+                </div>
+                <div class="doctors__card-info-contaier">
+                  <p class="doctors__card-doctor-name">Каминский-Дворжецкий Никита Александрович</p>
+                  <p class="doctors__card-doctor-position">Главный имплантолог сети, врач стоматолог-хирург, К.М.Н.</p>
+                </div>
+              </li>
+              <li class="swiper-slide doctors__card-container">
+                <div class="doctors__card-image-contaier">
+                  <img src="./images/doctor-1.png" alt="Константин Константинович Константинов">
+                </div>
+                <div class="doctors__card-info-contaier">
+                  <p class="doctors__card-doctor-name">Каминский-Дворжецкий Никита Александрович</p>
+                  <p class="doctors__card-doctor-position">Главный имплантолог сети, врач стоматолог-хирург, К.М.Н.</p>
+                </div>
+              </li>
+              <li class="swiper-slide doctors__card-container">
+                <div class="doctors__card-image-contaier">
+                  <img src="./images/doctor-2.png" alt="Константин Константинович Константинов">
+                </div>
+                <div class="doctors__card-info-contaier">
+                  <p class="doctors__card-doctor-name">Каминский-Дворжецкий Никита Александрович</p>
+                  <p class="doctors__card-doctor-position">Главный имплантолог сети, врач стоматолог-хирург, К.М.Н.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-prev doctors-button-prev">
+            <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="swiper-button-path" d="M11.5 1L1.5 11L11.5 21" stroke="#A3A5B3" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="swiper-button-next doctors-button-next">
+            <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="swiper-button-path" d="M2.5 1L12.5 11L2.5 21" stroke="#A3A5B3" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="swiper-pagination doctors-slider-pagination"></div>
+        </div>
+      </div>
+    </section>
     <section class="seo-text">
       <div class="seo-text__container">
         <h2 class="seo-text__title">Заголовок seo текст</h2>
@@ -1156,7 +1219,6 @@
           <div class="quiz__step-number quiz__step-number_centered">
             Шаг 3
           </div>
-          <img src="./images/last-step.svg" class="quiz__last-step-image" alt="Успешно">
           <p class="quiz__step-title">Отлично, последний шаг!</p>
           <p class="quiz__step-subtitle">Укажите свой номер телефона и мы отправим Вам <span
               class="semi-bold-span">персональный план лечения</span>
@@ -1168,11 +1230,31 @@
             <div class="input-invalid-icon"></div>
           </div>
           <button type="submit"
-            class="link-inherit orange-button quiz__orange-button quiz__orange-button-close">Закрыть</button>
+            class="link-inherit orange-button quiz__orange-button quiz__orange-button-send">Отправить
+          </button>
           <div class="quiz__checkbox-container">
             <input class="quiz__checkbox" checked type="checkbox" required>
             С политикой конфиденциальности ознакомлен
           </div>
+        </form>
+        <!-- Успешно -->
+        <form id="quiz-step-4" class="quiz__step">
+          <img src="./images/last-step.svg" class="quiz__last-step-image" alt="Успешно">
+          <p class="quiz__step-title">Успешно</p>
+          <p class="quiz__step-subtitle">Укажите свой номер телефона и мы отправим Вам <span
+              class="semi-bold-span">персональный план лечения</span>
+            по лунному календарю</p>
+          <button type="submit"
+            class="link-inherit orange-button quiz__orange-button quiz__orange-button-close">Закрыть</button>
+        </form>
+        <!-- Ошибка -->
+        <form id="quiz-step-5" class="quiz__step">
+          <img src="./images/last-step-fail.svg" class="quiz__last-step-image" alt="Ошбика">
+          <p class="quiz__step-title">Ошбика</p>
+          <p class="quiz__step-subtitle"><span class="semi-bold-span">Произошла ошбика,</span> попробуйте повторить
+            запрос снова</p>
+          <button type="submit"
+            class="link-inherit orange-button quiz__orange-button quiz__orange-button-close">Закрыть</button>
         </form>
       </div>
       <div class="quiz__doctor-container">
@@ -1201,7 +1283,6 @@
       </div>
     </div>
   </div>
-
   <script src="./js/quiz.js"></script>
   <script src="./js/burger.js"></script>
   <script src="./js/map.js"></script>
@@ -1210,6 +1291,7 @@
   <script src="./js/videotube.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=c9ed032f-0f47-41ae-8390-9122eafcd244&lang=ru_RU"
     type="text/javascript"></script>
+  <script src="./js/swiper-doctors.js"></script>
 </body>
 
 </html>

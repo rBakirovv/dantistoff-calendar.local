@@ -9,6 +9,8 @@ window.addEventListener("DOMContentLoaded", function () {
   const stepFirst = quiz.querySelector("#quiz-step-1");
   const stepSecond = quiz.querySelector("#quiz-step-2");
   const stepLast = quiz.querySelector("#quiz-step-3");
+  const stepSuccess = quiz.querySelector("#quiz-step-4");
+  const stepFail = quiz.querySelector("#quiz-step-5");
 
   const nameInput = quiz.querySelector("#quiz-name");
   const birthdayInput = quiz.querySelector("#quiz-birthday");
@@ -107,11 +109,6 @@ window.addEventListener("DOMContentLoaded", function () {
     })
 
     if (telInput.classList.contains("input-valid")) {
-      closeQuiz();
-
-      stepLast.classList.remove("quiz__step_active");
-      stepFirst.classList.add("quiz__step_active");
-
       const url = 'https://dantistoff.ru/webhook/konkurs_allon4/';
 
       const data = new URLSearchParams(new FormData());
@@ -127,7 +124,13 @@ window.addEventListener("DOMContentLoaded", function () {
         const result = fetch(url, {
           method: 'post',
           body: data,
-        });
+        }).then(() => {
+          stepLast.classList.remove("quiz__step_active");
+          stepSuccess.classList.add("quiz__step_active");
+        }).catch(() => {
+          stepLast.classList.remove("quiz__step_active");
+          stepFail.classList.add("quiz__step_active");
+        })
       }, 100)
 
       return
@@ -142,6 +145,24 @@ window.addEventListener("DOMContentLoaded", function () {
       telInput.classList.remove("input-invalid");
       telInput.classList.add("input-valid");
     }
+  })
+
+  stepSuccess.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    stepSuccess.classList.remove("quiz__step_active");
+    stepFirst.classList.add("quiz__step_active");
+
+    closeQuiz();
+  })
+
+  stepFail.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    stepFail.classList.remove("quiz__step_active");
+    stepFirst.classList.add("quiz__step_active");
+
+    closeQuiz();
   })
 
   nameInput.addEventListener("input", (e) => {
