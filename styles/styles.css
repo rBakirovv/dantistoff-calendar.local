@@ -16,6 +16,13 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 500px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 130%;
+  }
+}
+
 .swiper-wrapper {
   list-style-type: none;
   margin: 0;
@@ -3845,7 +3852,7 @@ body {
   flex-direction: column;
   align-items: center;
   transform: translateY(-60px);
-  padding: 0 0 120px;
+  padding: 0 0 100px;
 }
 
 .doctors__swiper-container {
@@ -3970,7 +3977,7 @@ body {
 
 @media screen and (max-width: 1360px) {
   .doctors__container {
-    padding: 0 40px 120px;
+    padding: 0 40px 100px;
   }
 
   .doctors__swiper-container {
@@ -4010,6 +4017,10 @@ body {
     width: 100%;
   }
 
+  .doctors__swiper-container {
+    margin-top: 10px;
+  }
+
   .doctors__card-info-contaier {
     padding-top: 16px;
   }
@@ -4023,5 +4034,255 @@ body {
     font-size: 18px;
     line-height: 26px;
     margin-top: 5px;
+  }
+}
+
+/* prices */
+
+.prices__container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.prices-accordions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.prices-accordions-list .accordion-head {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 46px;
+  letter-spacing: -0.02em;
+  border-radius: 25px 25px 0px 0px;
+  color: #000000;
+}
+
+.prices-accordions-list .accordion-body {
+  border-radius: 0 0 25px 25px;
+}
+
+.prices-accordions-list .accordion-item_active .accordion-head {
+  background: #501AA8;
+  color: #FFFFFF;
+}
+
+.prices-accordions-list .accordion-item_active .accordion-arrow-path {
+  stroke: white;
+}
+
+.prices-accordions-sublist {
+  border-radius: 0 0 25px 25px;
+}
+
+.prices-accordions-sublist .accordion-body {
+  border-radius: 0 0 25px 25px;
+}
+
+.prices-accordions-sublist .accordion-item {
+  border-radius: 0;
+}
+
+.prices-accordions-sublist .accordion-item:last-of-type {
+  border-radius: 0 0 25px 25px;
+}
+
+.prices-accordions-sublist .accordion-head {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 125%;
+  background: #F6F6F6 !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
+}
+
+.prices-accordions-sublist .accordion-head:last-of-type {
+  border-radius: 0 0 25px 25px !important;
+}
+
+.prices-accordions-sublist .accordion-item_active .accordion-head {
+  background: #FFFFFF !important;
+}
+
+.prices-accordions-sublist .accordion-item .accordion-arrow-svg {
+  transform: none;
+}
+
+.prices-accordions-sublist .accordion-item_active .accordion-arrow-svg {
+  transform: rotate(90deg);
+}
+
+.prices-accordions-sublist .accordion-item .accordion-arrow-path {
+  stroke: #06111B;
+}
+
+.prices-accordions-sublist .accordion-item_active .accordion-arrow-path {
+  stroke: #A3A5B3;
+}
+
+.prices-accordions-sublist .accordion-body {
+  max-height: 0;
+}
+
+.prices-accordions-sublist .accordion-item_active .accordion-body {
+  max-height: 10000px;
+}
+
+.prices__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 25px 25px;
+}
+
+.prices__list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px 20px;
+}
+
+.prices__list-item:last-of-type {
+  border-radius: 0 0 25px 25px;
+}
+
+.prices__list-item:nth-child(1n) {
+  background: #FFFFFF;
+}
+
+.prices__list-item:nth-child(2n) {
+  background: #FAF9F9;
+}
+
+.prices__list-text-container {
+  max-width: 815px;
+  margin-right: 1rem;
+}
+
+.prices__list-title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0;
+}
+
+.prices__list-subtitle {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 155%;
+  color: #6E6E6E;
+  margin: 10px 0 0;
+}
+
+.prices__list-price-crossed {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #6E6E6E;
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.prices__list-price-color {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #501AA8;
+  margin: 0;
+}
+
+.prices__list-price {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #06111B;
+  margin: 0;
+}
+
+@media screen and (max-width: 1360px) {
+  .prices__container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .prices__container {
+    padding: 0 17px 40px;
+  }
+
+  .prices__list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .prices__list-price-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+    align-items: baseline;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .prices-accordions-list {
+    margin-top: 10px;
+  }
+
+  .prices-accordions-list .accordion-head {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .prices-accordions-sublist .accordion-head {
+    font-size: 20px;
+    line-height: 115%;
+  }
+
+  .prices__list-title {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .prices__list-subtitle {
+    font-size: 14px;
+    line-height: 155%;
+  }
+
+  .prices__list-price-color {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .prices__list-price-crossed {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .prices__list-price {
+    font-size: 18px;
+    line-height: 26px;
   }
 }
