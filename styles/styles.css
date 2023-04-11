@@ -3851,6 +3851,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   transform: translateY(-60px);
   padding: 0 0 100px;
 }
@@ -4146,7 +4147,7 @@ body {
   padding: 20px 30px 20px;
 }
 
-.prices__list-item:last-of-type {
+.prices-accordions-list .accordion-item:last-of-type  .prices__list-item:last-of-type {
   border-radius: 0 0 25px 25px;
 }
 
@@ -4295,5 +4296,287 @@ body {
   .prices-accordions-list .accordion-head .accordion-arrow-svg {
     width: 14px;
     height: 14px;
+  }
+}
+
+/* promotions */
+
+.promotions {
+  position: relative;
+}
+
+.promotions::after {
+  content: '';
+  position: absolute;
+  top: calc(50% + 50px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 150px;
+  border-radius: 50%;
+  background: #307DDB;
+  filter: blur(275px);
+}
+
+.promotions__container {
+  position: relative;
+  z-index: 2;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 120px 0 0;
+}
+
+.promotions__grid-container {
+  display: grid;
+  grid-template-columns: 642px 642px;
+  grid-template-rows: 390px 390px;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.promotions__card {
+  position: relative;
+  width: 642px;
+  height: 390px;
+  background: #FFFFFF;
+  border-radius: 25px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.promotions__card_without-image::after {
+  display: none;
+}
+
+.promotions__card_without-image::before {
+  display: none;
+}
+
+.promotions__card::after {
+  content: '';
+  position: absolute;
+  width: 395px;
+  height: 190px;
+  right: -175px;
+  bottom: -56px;
+  border-radius: 555px;
+  background: #B8BFFF;
+  filter: blur(90px);
+}
+
+.promotions__card::before {
+  content: '';
+  position: absolute;
+  width: 105px;
+  height: 130px;
+  right: -37px;
+  bottom: 50px;
+  border-radius: 555px;
+  background: #FD89BD;
+  filter: blur(90px);
+}
+
+.promotions__card-title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #102033;
+  max-width: 290px;
+  margin: 0;
+}
+
+.promotions__card-subtitle {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+  color: #6E6E6E;
+  margin: 0;
+  max-width: 305px;
+}
+
+.promotions__card-price {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 37px;
+  line-height: 53px;
+  letter-spacing: -0.02em;
+  color: #501AA8;
+  margin: 15px 0 0;
+}
+
+.promotions__card-date {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+  color: #501AA8;
+  top: 50px;
+  right: 40px;
+  background: rgba(124, 80, 196, 0.1);
+  border-radius: 50px;
+  padding: 4px 10px;
+}
+
+.promotions__card-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #FC8E28;
+  bottom: 40px;
+  left: 40px;
+  border-radius: 500px;
+  border: 1px solid #FC8E28;
+  min-width: 250px;
+  height: 65px;
+  box-sizing: border-box;
+  padding: 14px 66px;
+  transition: all 0.4s ease-in-out;
+}
+
+.promotions__card-button:hover {
+  background: #FC8E28;
+  color: #FFFFFF;
+}
+
+.promotions__card-image {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1360px) {
+  .promotions__container {
+    padding: 40px;
+  }
+
+  .promotions__grid-container {
+    justify-content: center;
+    grid-template-columns: 642px;
+    grid-template-rows: 390px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .promotions::after {
+    display: none;
+  }
+
+  .promotions__container {
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .promotions__container {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .promotions__grid-container {
+    grid-template-columns: 326px;
+    grid-template-rows: 517px;
+    margin-top: 10px;
+  }
+
+  .promotions__card {
+    width: 326px;
+    height: 517px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .promotions__card-title {
+    padding-top: 230px;
+  }
+
+  .promotions__card-date {
+    top: 210px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .promotions__card-image {
+    width: auto;
+    height: 190px;
+    right: 50%;
+    top: 10px;
+    transform: translateX(50%);
+    bottom: inherit;
+  }
+
+  .promotions__card-image_implants {
+    right: 0;
+    transform: none;
+  }
+
+  .promotions__card-title {
+    font-size: 32px;
+    line-height: 125%;
+    max-width: 210px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .promotions__card-subtitle {
+    font-size: 18px;
+    line-height: 125%;
+    text-align: center;
+    margin: 10px auto 0;
+  }
+
+  .promotions__card-price {
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .promotions__card-button {
+    width: calc(100% - 40px);
+    height: 58px;
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .promotions__card::after {
+    bottom: inherit;
+    top: 50px;
+    right: 0;
+    width: 260px;
+    height: 50px;
+    filter: blur(50px);
+  }
+
+  .promotions__card::before {
+    bottom: inherit;
+    top: 110px;
+    right: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    border-radius: 0;
+    filter: none;
   }
 }
