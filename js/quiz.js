@@ -265,6 +265,31 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  birthdayInput.addEventListener('keyup', function (e) {
+    if (e.keyCode < 47 || e.keyCode > 57) {
+      e.preventDefault();
+    }
+
+    var len = birthdayInput.value.length;
+
+    if (len !== 1 || len !== 3) {
+      if (e.keyCode == 47) {
+        e.preventDefault();
+      }
+    }
+    if (len === 2) {
+      if (e.keyCode !== 8 && e.keyCode !== 46) {
+        birthdayInput.value = birthdayInput.value + '.';
+      }
+    }
+
+    if (len === 5) {
+      if (e.keyCode !== 8 && e.keyCode !== 46) {
+        birthdayInput.value = birthdayInput.value + '.';
+      }
+    }
+  });
+
   telInput.addEventListener('keydown', onPhoneKeyDown);
   telInput.addEventListener('input', onPhoneInput, false);
   telInput.addEventListener('paste', onPhonePaste, false);
