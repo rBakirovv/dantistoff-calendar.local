@@ -3886,6 +3886,57 @@ body {
   padding: 16px 30px 30px;
 }
 
+.doctors__card-exp-container {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/doctor-exp.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 78px;
+  min-height: 78px;
+  max-width: 78px;
+  max-height: 78px;
+}
+
+.doctors__card-exp-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/doctor-exp.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 78px;
+  min-height: 78px;
+  max-width: 78px;
+  max-height: 78px;
+}
+
+.doctors__card-container:hover .doctors__card-exp-container {
+  background-image: url(../images/doctor-exp-active.svg);
+}
+
+.doctors__card-container:hover .doctors__card-exp-container::after {
+  opacity: 0;
+}
+
+.swiper-slide-active .doctors__card-exp-container {
+  background-image: url(../images/doctor-exp-active.svg);
+}
+
+.swiper-slide-active .doctors__card-exp-container::after {
+  opacity: 0;
+}
+
 .doctors__card-image-contaier {
   position: relative;
   display: flex;
