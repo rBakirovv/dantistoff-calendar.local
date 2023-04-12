@@ -1,11 +1,12 @@
 window.addEventListener("DOMContentLoaded", function () {
   const swiperDoctors = new Swiper('.swiper-doctors', {
-    autoHeight: true,
+    autoHeight: true, //enable auto height
     loop: true,
     slideToClickedSlide: true,
     centeredSlides: true,
     slidesPerView: "auto",
     spaceBetween: 0,
+    direction: "horizontal",
     navigation: {
       nextEl: ".doctors-button-next",
       prevEl: ".doctors-button-prev",
@@ -17,7 +18,8 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       500: {
-        autoHeight: true,
+        autoHeight: true, //enable auto height
+        direction: "horizontal",
         spaceBetween: 24,
       },
     },

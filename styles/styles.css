@@ -3119,7 +3119,7 @@ body {
 .seo-text__container {
   max-width: 1320px;
   /*transform: translateY(-60px);*/
-  margin: 30px auto 0;
+  margin: 0 auto;
 }
 
 .seo-text__title {
@@ -4438,14 +4438,6 @@ body {
   padding: 40px;
 }
 
-.promotions__card_without-image::after {
-  display: none;
-}
-
-.promotions__card_without-image::before {
-  display: none;
-}
-
 .promotions__card::after {
   content: '';
   position: absolute;
@@ -4558,6 +4550,12 @@ body {
   bottom: 0;
 }
 
+.promotions__card-sedation-moon {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
 @media screen and (max-width: 1360px) {
   .promotions__container {
     padding: 40px;
@@ -4621,6 +4619,23 @@ body {
   .promotions__card-image_implants {
     right: 0;
     transform: none;
+  }
+
+  .promotions__card-image_sedation {
+    max-width: 215px;
+    max-height: 150px;
+    right: 0;
+    top: 50px;
+    transform: none;
+  }
+
+  .promotions__card-sedation-moon {
+    position: absolute;
+    width: 220px;
+    height: 135px;
+    top: -15px;
+    right: inherit;
+    left: 5px;
   }
 
   .promotions__card-title {
