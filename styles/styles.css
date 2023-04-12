@@ -13,13 +13,30 @@ body {
   text-align: center;
   color: #fff;
   letter-spacing: -0.01em;
-  margin: 0;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 160%;
+  text-align: center;
+  max-width: 870px;
+  color: #FFFFFF;
+  margin: 10px auto 0;
 }
 
 @media screen and (max-width: 500px) {
   .section-title {
     font-size: 32px;
     line-height: 130%;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    line-height: 160%;
   }
 }
 
@@ -4956,7 +4973,7 @@ body {
   }
 
   .video-reviews__container {
-    padding: 80px 0 40px;
+    padding: 40px 0;
   }
 
   .video-reviews__title {
@@ -5112,5 +5129,198 @@ body {
     margin-top: 10px;
     grid-template-columns: 312px;
     gap: 10px;
+  }
+}
+
+/* awards */
+
+.awards {
+  position: relative;
+  width: 100%;
+}
+
+.awards::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #501AA8;
+  border-radius: 50%;
+  filter: blur(275px);
+}
+
+.awards__container {
+  position: relative;
+  z-index: 2;
+  padding: 120px 0;
+}
+
+.awards__cards-container {
+  display: grid;
+  grid-template-columns: 492px 492px;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.awards__card {
+  position: relative;
+  width: 492px;
+  height: 650px;
+  border-radius: 10px;
+  background-image: url(../images/awards-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #2B2B2B;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 50px 55px 30px;
+}
+
+.awards__card::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background-image: url(../images/awards-blur.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 708px;
+  height: 724px;
+  left: -30px;
+  bottom: -100px;
+}
+
+.awards__card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.awards__card-subtitle {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FCFCFC;
+  margin: 0 auto;
+}
+
+.awards__card-title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 103%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FAFCFF;
+  text-shadow: -4.6798px -4.6798px 19.8892px rgba(255, 255, 255, 0.3);
+  margin: 18px auto 22px;
+}
+
+.awards__card-title .orange-line::after {
+  bottom: 10px;
+}
+
+.awards__image-award {
+  max-height: 344px;
+}
+
+.awards__company-container {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #FAFCFF;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.awards__company-image {
+  max-width: 180px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1360px) {
+  .awards__container {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .awards__cards-container {
+    grid-template-columns: 450px 450px;
+  }
+
+  .awards__card {
+    width: 450px;
+    padding: 50px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .awards__cards-container {
+    grid-template-columns: 450px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .awards::after {
+    top: 50%;
+    height: 70%;
+    width: 70%;
+    transform: translateY(-50%) translateX(-50%) rotate(180deg);
+    background: radial-gradient(50% 50% at 50% 50%, #530C65 0%, #0B206A 100%);
+    filter: blur(125px);
+  }
+
+  .awards__container {
+    padding: 40px 18px;
+  }
+
+  .awards__cards-container {
+    grid-template-columns: 320px;
+    margin-top: 10px;
+  }
+
+  .awards__card {
+    width: 320px;
+    height: 590px;
+    padding: 20px 12px 20px;
+  }
+
+  .awards__card-title {
+    font-size: 32px;
+    line-height: 45px;
+    margin: 15px auto;
+  }
+
+  .awards__image-award {
+    width: 100%;
+  }
+
+  .awards__company-container {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 20px;
+  }
+
+  .awards__company-image {
+    width: 50%;
   }
 }
