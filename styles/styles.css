@@ -3130,7 +3130,7 @@ body {
 .seo-text {
   position: relative;
   background-color: #06111B;
-  padding-bottom: 135px;
+  padding-bottom: calc(135px + 120px);
 }
 
 .seo-text__container {
@@ -5105,16 +5105,16 @@ body {
 }
 
 @media screen and (max-width: 1360px) {
+  .news__container {
+    padding: 40px 0;
+  }
+
   .news__grid-container {
     grid-template-columns: repeat(3, 312px);
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .news__container {
-    padding: 40px 0;
-  }
-
   .news__grid-container {
     grid-template-columns: repeat(2, 312px);
   }
@@ -5322,5 +5322,67 @@ body {
 
   .awards__company-image {
     width: 50%;
+  }
+}
+
+/* mass-media */
+
+.mass-media__container {
+  padding: 0 0 120px;
+}
+
+.mass-media__grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 312px);
+  gap: 24px;
+  margin: 40px 0 0;
+}
+
+.mass-media__card {
+  display: flex;
+  flex-direction: column;
+  width: 312px;
+  height: 274px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.mass-media__card:hover {
+  transform: translateY(-10px);
+}
+
+.mass-media__card-image {
+  width: 312px;
+  height: 175px;
+}
+
+.mass-media__card-text {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000000;
+  background-color: #FFFFFF;
+  padding: 15px 17px;
+}
+
+@media screen and (max-width: 1360px) {
+  .mass-media__container {
+    padding: 40px 0 80px;
+  }
+
+  .mass-media__grid-container {
+    grid-template-columns: repeat(2, 312px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mass-media__grid-container {
+    margin-top: 10px;
+    grid-template-columns: repeat(1, 312px);
   }
 }
