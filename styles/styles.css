@@ -3938,6 +3938,38 @@ body {
   max-height: 78px;
 }
 
+.doctors__card-exp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 47px;
+  margin: 0;
+}
+
+.doctors__card-exp-num {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.doctors__card-exp-years {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-top: -20px;
+}
+
 .doctors__card-exp-container::after {
   content: "";
   position: absolute;
@@ -3964,6 +3996,7 @@ body {
   opacity: 0;
 }
 
+/*
 .swiper-slide-active .doctors__card-exp-container {
   background-image: url(../images/doctor-exp-active.svg);
 }
@@ -3971,6 +4004,7 @@ body {
 .swiper-slide-active .doctors__card-exp-container::after {
   opacity: 0;
 }
+*/
 
 .doctors__card-image-contaier {
   position: relative;
@@ -4022,9 +4056,11 @@ body {
   transition: all .3s ease-in;
 }
 
+/*
 .swiper-doctors .swiper-slide-active .doctors__card-image-bg::after {
   opacity: 0;
 }
+*/
 
 .swiper-doctors .swiper-slide:hover .doctors__card-image-bg::after {
   opacity: 0;
@@ -4042,9 +4078,11 @@ body {
   margin: 0;
 }
 
+/*
 .swiper-doctors .swiper-slide-active .doctors__card-doctor-name {
   color: #FC8E28;
 }
+*/
 
 .swiper-doctors .swiper-slide:hover .doctors__card-doctor-name {
   color: #FC8E28;
@@ -4108,7 +4146,7 @@ body {
   background: #FFFFFF;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1550px) {
   .doctors-button-next {
     top: inherit !important;
     bottom: -117px !important;
@@ -4124,7 +4162,7 @@ body {
 
 @media screen and (max-width: 1360px) {
   .doctors__container {
-    padding: 0 40px 100px;
+    padding: 0 0 100px;
   }
 
   .doctors__swiper-container {
@@ -4252,6 +4290,7 @@ body {
   background: #F6F6F6 !important;
   border-radius: 0 !important;
   color: #000000 !important;
+  border-bottom: 1px solid #DEDEDE;
 }
 
 .prices-accordions-sublist .accordion-head:last-of-type {
@@ -4260,6 +4299,7 @@ body {
 
 .prices-accordions-sublist .accordion-item_active .accordion-head {
   background: #FFFFFF !important;
+  border-bottom: none;
 }
 
 .prices-accordions-sublist .accordion-item .accordion-arrow-svg {
@@ -4508,7 +4548,7 @@ body {
 .promotions__grid-container {
   display: grid;
   grid-template-columns: 642px 642px;
-  grid-template-rows: 390px 390px;
+  grid-template-rows: inherit;
   gap: 30px;
   margin-top: 40px;
 }
@@ -4552,7 +4592,7 @@ body {
   font-family: 'Jost';
   font-style: normal;
   font-weight: 400;
-  font-size: 44px;
+  font-size: 40px;
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #102033;
@@ -4569,6 +4609,7 @@ body {
   letter-spacing: -0.02em;
   color: #6E6E6E;
   margin: 0;
+  margin-top: 12px;
   max-width: 305px;
 }
 
@@ -4844,7 +4885,38 @@ body {
 }
 
 .video-reviews__link:hover {
-  transform: translateY(-10px);
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
+
+.video-reviews__link-ico {
+  position: relative;
+  background-image: url(../images/yt-icon.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 17px;
+}
+
+.video-reviews__link-ico::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  background-image: url(../images/yt-icon.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.4s ease-in-out;
+}
+
+.video-reviews__link:hover .video-reviews__link-ico::after {
+  opacity: 0;
 }
 
 .video-reviews__swiper-container {
@@ -4864,6 +4936,14 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+}
+
+.video-reviews__card.swiper-slide-active {
+  pointer-events: none;
+}
+
+.video-reviews__card.swiper-slide-active a {
+  pointer-events: all;
 }
 
 .video-reviews__card:hover {
@@ -4904,7 +4984,6 @@ body {
   margin-left: 5px;
 }
 
-/*
 .swiper-wrapper-video-reviews .swiper-slide::after {
   content: '';
   position: absolute;
@@ -4921,7 +5000,6 @@ body {
 .swiper-wrapper-video-reviews .swiper-slide-active::after {
   display: none;
 }
-*/
 
 .video-reviews-slider-pagination {
   z-index: 2 !important;
@@ -5270,7 +5348,7 @@ body {
 }
 
 .awards__company-image {
-  max-width: 180px;
+  max-width: 160px;
   width: 100%;
 }
 

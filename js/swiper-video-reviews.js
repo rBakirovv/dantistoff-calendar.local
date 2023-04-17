@@ -16,6 +16,7 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       500: {
+        slideToClickedSlide: true,
         centeredSlides: true,
         spaceBetween: 15,
       },
