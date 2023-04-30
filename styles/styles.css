@@ -46,6 +46,23 @@ body {
   margin: 10px auto 0;
 }
 
+.line-blue {
+  position: relative;
+  white-space: nowrap;
+}
+
+.line-blue::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 10px;
+  border: solid 3px #307DDB;
+  border-color: #307DDB transparent transparent transparent;
+  border-radius: 30%;
+}
+
 @media screen and (max-width: 500px) {
   .section-title {
     font-size: 32px;
@@ -55,6 +72,10 @@ body {
   .section-subtitle {
     font-size: 16px;
     line-height: 160%;
+  }
+
+  .line-blue::after {
+    bottom: -10px;
   }
 }
 
@@ -3891,7 +3912,6 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  transform: translateY(-60px);
   padding: 0 0 100px;
 }
 
@@ -4176,12 +4196,6 @@ body {
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .doctors__container {
-    transform: translateY(-30px);
-  }
-}
-
 @media screen and (max-width: 500px) {
   .doctors__card-container {
     width: 316px !important;
@@ -4233,6 +4247,7 @@ body {
 .prices__container {
   max-width: 1320px;
   margin: 0 auto;
+  padding-top: 100px;
 }
 
 .prices-accordions-list {
@@ -5481,4 +5496,251 @@ body {
     margin-top: 10px;
     grid-template-columns: repeat(1, 312px);
   }
+}
+
+/* doctor-quote */
+
+.doctor-quote {
+  position: relative;
+  transform: translateY(-60px);
+}
+
+.doctor-quote__container {
+  position: relative;
+  max-width: 1360px;
+  min-height: 939px;
+  border-radius: 25px;
+  background-color: #FFF;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.doctor-quote__container::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 239px;
+  height: 296px;
+  right: 250px;
+  top: 283px;
+  background: #FF7600;
+  filter: blur(175px);
+  border-radius: 555px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.doctor-quote__container::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 378px;
+  height: 410px;
+  right: 0px;
+  top: 400px;
+  background: #2178E3;
+  filter: blur(225px);
+  border-radius: 555px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.doctor-quote__image-container {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  bottom: -10px;
+}
+
+.doctor-quote__image-container::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  right: 30px;
+  bottom: 50%;
+  transform: translateY(50%);
+  background-image: url(../images/doctor-stars.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 427px;
+  height: 395px;
+}
+
+.doctor-quote__image-text-container {
+  position: absolute;
+  z-index: 3;
+  right: 50%;
+  bottom: 77px;
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.doctor-quote__image-title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0;
+}
+
+.doctor-quote__image-subtitle {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  color: #6E6E6E;
+  margin: 0;
+}
+
+.doctor-quote__text-container {
+  position: relative;
+  z-index: 2;
+  padding: 96px 0 59px 99px;
+}
+
+.doctor-quote__quote {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.11em;
+  background: linear-gradient(180deg, #F7771B 0%, #E75D32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.doctor-quote__title {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 135%;
+  letter-spacing: -0.02em;
+  color: #000000;
+  max-width: 615px;
+  margin: 5px 0 0;
+}
+
+.doctor-quote__text {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 177%;
+  letter-spacing: -0.01em;
+  color: #000000;
+  max-width: 700px;
+  margin: 15px 0 0;
+}
+
+.doctor-quote__thanks {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 160%;
+  letter-spacing: -0.01em;
+  color: #501AA8;
+  margin: 39px 0 0;
+}
+
+.doctor-quote__quote-image {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+@media screen and (max-width: 1360px) {
+  .doctor-quote__container {
+    margin: 0 40px;
+  }
+
+  .doctor-quote__image-container {
+    right: 0;
+  }
+
+  .doctor-quote__text-container {
+    padding: 60px 40px;
+  }
+
+  .doctor-quote__quote-image {
+    display: none;
+  }
+
+  .doctor-quote__thanks {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .doctor-quote {
+    transform: translateY(-30px);
+  }
+
+  .doctor-quote__container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .doctor-quote__image-container {
+    position: relative;
+    right: inherit;
+  }
+
+  .doctor-quote__text-container {
+    padding: 30px;
+  }
+
+  .doctor-quote__container::after {
+    top: inherit;
+    bottom: 283px;
+  }
+
+  .doctor-quote__container::before {
+    top: inherit;
+    bottom: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .doctor-quote__container {
+    margin: 0 4px;
+  }
+
+  .doctor-quote__image {
+    width: 98%;
+  }
+
+  .doctor-quote__text-container {
+    text-align: center;
+    padding-bottom: 0px;
+  }
+
+  .doctor-quote__title {
+    font-size: 28px;
+    line-height: 135%;
+  }
+
+  .doctor-quote__image-container::after {
+    display: none;
+  }
+
+  .doctor-quote__image-text-container {
+    bottom: 30px;
+  }
+
+  .doctor-quote__thanks {
+    margin-top: 10px;
+  } 
 }
